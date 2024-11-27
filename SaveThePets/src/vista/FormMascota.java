@@ -1,6 +1,7 @@
 package vista;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatArcDarkIJTheme;
+import javax.swing.ImageIcon;
 
 /**
  * Vista del formolario Mascotas
@@ -13,6 +14,8 @@ public class FormMascota extends javax.swing.JFrame {
      */
     public FormMascota() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/Imagenes/huella.png")).getImage()); //Imagen para el soft
+        this.setTitle("Pet Shop Management System");
     }
 
     /**

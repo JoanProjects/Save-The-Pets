@@ -6,6 +6,7 @@ package vista;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatArcDarkIJTheme;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -19,6 +20,7 @@ public class PrincipalPrincipal extends javax.swing.JFrame {
     public PrincipalPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
+        setIconImage(new ImageIcon(getClass().getResource("/Imagenes/huella.png")).getImage()); //Imagen para el soft
         this.setTitle("Pet Shop Management System");
     }
 

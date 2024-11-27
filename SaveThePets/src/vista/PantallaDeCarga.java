@@ -2,6 +2,7 @@
 package vista;
 
 
+import javax.swing.ImageIcon;
 import javax.swing.SwingUtilities;
 
 
@@ -18,6 +19,7 @@ public class PantallaDeCarga extends javax.swing.JFrame {
     public PantallaDeCarga() {
         initComponents();
         iniciarEfectoLoading();
+        setIconImage(new ImageIcon(getClass().getResource("/Imagenes/huella.png")).getImage()); //Imagen para el soft
         setLocationRelativeTo(null); // Funcion para que la ventana aparezca centralizada 
         
     }
