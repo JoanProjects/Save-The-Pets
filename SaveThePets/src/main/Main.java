@@ -1,5 +1,5 @@
 
-package Main;
+package main;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatArcDarkIJTheme;
 import javax.swing.SwingUtilities;
