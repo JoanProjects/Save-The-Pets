@@ -13,7 +13,7 @@ public class Login extends javax.swing.JFrame {
     
     public Login() {
         initComponents();
-        this.setTitle("Pet Shop Management System"); // Titulo del Software
+        this.setTitle("Save The Pets"); // Titulo del Software
         setIconImage(new ImageIcon(getClass().getResource("/Imagenes/huella.png")).getImage()); //Imagen para el soft
         setLocationRelativeTo(null); // Funcion para que la ventana aparezca centralizada
         pnlAcceder.requestFocusInWindow(); // Funcion para darle el Focus a PnlAcceder        

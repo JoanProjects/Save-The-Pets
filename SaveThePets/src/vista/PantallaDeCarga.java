@@ -67,7 +67,6 @@ public class PantallaDeCarga extends javax.swing.JFrame {
         lblWelcome4 = new javax.swing.JLabel();
         lblVector = new javax.swing.JLabel();
         lblLoading = new javax.swing.JLabel();
-        Welcome1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -88,8 +87,8 @@ public class PantallaDeCarga extends javax.swing.JFrame {
         Welcome.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
         Welcome.setForeground(new java.awt.Color(255, 255, 255));
         Welcome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Welcome.setText("Pet Shop Management ");
-        jPanel1.add(Welcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 550, 70));
+        Welcome.setText("Save The Pets ");
+        jPanel1.add(Welcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 390, 70));
 
         lblWelcome2.setBackground(new java.awt.Color(255, 255, 255));
         lblWelcome2.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
@@ -115,13 +114,6 @@ public class PantallaDeCarga extends javax.swing.JFrame {
         lblLoading.setText("Loading... ");
         jPanel1.add(lblLoading, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 390, 130, 40));
 
-        Welcome1.setBackground(new java.awt.Color(255, 255, 255));
-        Welcome1.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
-        Welcome1.setForeground(new java.awt.Color(255, 255, 255));
-        Welcome1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Welcome1.setText("System");
-        jPanel1.add(Welcome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 200, 70));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -143,7 +135,6 @@ public class PantallaDeCarga extends javax.swing.JFrame {
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel Welcome;
-    public javax.swing.JLabel Welcome1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblGestion;
     public javax.swing.JLabel lblLoading;

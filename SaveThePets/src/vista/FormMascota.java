@@ -2,6 +2,7 @@ package vista;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatArcDarkIJTheme;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 /**
  * Vista del formolario Mascotas
@@ -15,7 +16,10 @@ public class FormMascota extends javax.swing.JFrame {
     public FormMascota() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/Imagenes/huella.png")).getImage()); //Imagen para el soft
-        this.setTitle("Pet Shop Management System");
+        this.setTitle("Mascotas");
+        this.setLocationRelativeTo(null);
+        txtBuscar.requestFocus();
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); //Cerrar Ventana
     }
 
     /**
@@ -27,109 +31,22 @@ public class FormMascota extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnlMascota = new javax.swing.JPanel();
-        txtID = new javax.swing.JTextField();
-        txtNombre = new javax.swing.JTextField();
-        btnGuardar = new javax.swing.JButton();
-        btnEditar = new javax.swing.JButton();
-        btnEliminar = new javax.swing.JButton();
-        btnActualizar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
-        cbVacunacion = new javax.swing.JComboBox<>();
-        cbSexo = new javax.swing.JComboBox<>();
-        cbAdopcion = new javax.swing.JComboBox<>();
-        txtRaza = new javax.swing.JTextField();
-        txtPeso = new javax.swing.JTextField();
-        txtEspecie = new javax.swing.JTextField();
         PnlMascota2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblMascotas = new javax.swing.JTable();
         txtBuscar = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
+        btnAgregar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Agenda de Contactos");
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
 
-        pnlMascota.setBackground(new java.awt.Color(0, 0, 0));
-        pnlMascota.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos de la Mascota", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 18), new java.awt.Color(255, 255, 255))); // NOI18N
-        pnlMascota.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtID.setEditable(false);
-        txtID.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        txtID.setForeground(new java.awt.Color(255, 255, 255));
-        txtID.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtID.setToolTipText("");
-        txtID.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
-        pnlMascota.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 83, -1, 45));
-
-        txtNombre.setBackground(new java.awt.Color(60, 63, 65));
-        txtNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtNombre.setToolTipText("");
-        txtNombre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
-        pnlMascota.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 146, 230, 50));
-
-        btnGuardar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Save_24x24.png"))); // NOI18N
-        btnGuardar.setText("Guardar");
-        btnGuardar.setToolTipText("Guardar datos del contacto");
-        pnlMascota.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 360, 273, 47));
-
-        btnEditar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/editar.png"))); // NOI18N
-        btnEditar.setText("Editar");
-        pnlMascota.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 413, 118, 43));
-
-        btnEliminar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/borrar.png"))); // NOI18N
-        btnEliminar.setText("Eliminar");
-        pnlMascota.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 474, 118, 45));
-
-        btnActualizar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/actualizar.png"))); // NOI18N
-        btnActualizar.setText("Actualizar");
-        pnlMascota.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(313, 413, 137, 43));
-
-        btnCancelar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/cancelar.png"))); // NOI18N
-        btnCancelar.setText("Cancelar");
-        pnlMascota.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(313, 474, 137, 45));
-
-        cbVacunacion.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        cbVacunacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Vacunado ", "No Vacunado" }));
-        cbVacunacion.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Estado De Vacunacion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
-        pnlMascota.add(cbVacunacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 286, 230, 50));
-
-        cbSexo.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        cbSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Macho", "Hembra", "Hermafrodita" }));
-        cbSexo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sexo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
-        pnlMascota.add(cbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 214, 230, 50));
-
-        cbAdopcion.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        cbAdopcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Adoptado", "No Adoptado" }));
-        cbAdopcion.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Estado De Adopcion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
-        pnlMascota.add(cbAdopcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 146, 230, 50));
-
-        txtRaza.setBackground(new java.awt.Color(60, 63, 65));
-        txtRaza.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtRaza.setToolTipText("");
-        txtRaza.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Raza", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
-        pnlMascota.add(txtRaza, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 216, 230, 50));
-
-        txtPeso.setBackground(new java.awt.Color(60, 63, 65));
-        txtPeso.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtPeso.setToolTipText("");
-        txtPeso.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Peso", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
-        pnlMascota.add(txtPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 230, 50));
-
-        txtEspecie.setBackground(new java.awt.Color(60, 63, 65));
-        txtEspecie.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtEspecie.setToolTipText("");
-        txtEspecie.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Especie", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
-        pnlMascota.add(txtEspecie, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 230, 50));
-
-        PnlMascota2.setBackground(new java.awt.Color(0, 0, 0));
+        PnlMascota2.setBackground(new java.awt.Color(15, 15, 15));
         PnlMascota2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Animales Inscritos", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 18))); // NOI18N
         PnlMascota2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -150,43 +67,66 @@ public class FormMascota extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblMascotas);
 
-        PnlMascota2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 620, 280));
+        PnlMascota2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 880, 280));
 
         txtBuscar.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         txtBuscar.setToolTipText("");
         txtBuscar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
-        PnlMascota2.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 415, -1));
+        PnlMascota2.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, 190, -1));
 
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/buscar.png"))); // NOI18N
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Search_32x32.png"))); // NOI18N
         btnBuscar.setToolTipText("Buscar contacto");
-        PnlMascota2.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 90, 39));
+        PnlMascota2.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 180, 90, 40));
+
+        btnActualizar.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Update.png"))); // NOI18N
+        btnActualizar.setText("Actualizar");
+        PnlMascota2.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 220, 70));
+
+        btnAgregar.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar.png"))); // NOI18N
+        btnAgregar.setText("Agregar");
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
+            }
+        });
+        PnlMascota2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 220, 70));
+
+        btnEliminar.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Delete.png"))); // NOI18N
+        btnEliminar.setText("Eliminar");
+        PnlMascota2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, 220, -1));
+
+        btnEditar.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Editar.png"))); // NOI18N
+        btnEditar.setText("Editar");
+        PnlMascota2.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, 220, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(pnlMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PnlMascota2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(PnlMascota2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlMascota, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PnlMascota2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
     private void tblMascotasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMascotasMouseClicked
-        this.btnGuardar.setEnabled(false);
-        this.btnEditar.setEnabled(true);
-        this.btnActualizar.setEnabled(false);
-        this.btnCancelar.setEnabled(true);
-        this.btnEliminar.setEnabled(true);
+        this.btnAgregar.setEnabled(false);
     }//GEN-LAST:event_tblMascotasMouseClicked
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+       DatosMascotas Presentar = new DatosMascotas();
+       Presentar.setVisible(true);
+       Presentar.setLocation(200, 150);
+    }//GEN-LAST:event_btnAgregarActionPerformed
+
 
  
     /**
@@ -231,22 +171,12 @@ public class FormMascota extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PnlMascota2;
     public javax.swing.JButton btnActualizar;
+    public javax.swing.JButton btnAgregar;
     public javax.swing.JButton btnBuscar;
-    public javax.swing.JButton btnCancelar;
     public javax.swing.JButton btnEditar;
     public javax.swing.JButton btnEliminar;
-    public javax.swing.JButton btnGuardar;
-    private javax.swing.JComboBox<String> cbAdopcion;
-    private javax.swing.JComboBox<String> cbSexo;
-    private javax.swing.JComboBox<String> cbVacunacion;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPanel pnlMascota;
     public javax.swing.JTable tblMascotas;
     public javax.swing.JTextField txtBuscar;
-    public javax.swing.JTextField txtEspecie;
-    public javax.swing.JTextField txtID;
-    public javax.swing.JTextField txtNombre;
-    public javax.swing.JTextField txtPeso;
-    public javax.swing.JTextField txtRaza;
     // End of variables declaration//GEN-END:variables
 }
