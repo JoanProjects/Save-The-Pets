@@ -15,6 +15,7 @@ public class MascotasDAO {
     ResultSet         rs;
 
     //Listar registro de mascotas a buscar
+    //Devuelve un arrayList con el resultado de los datos buscados
     //@param valorBuscar
     //@return datos
     public List listarRegistro(String valorBuscar){
@@ -53,6 +54,7 @@ public class MascotasDAO {
     }
     
     //Metodo lista todos los registros en Mascotas
+    //Devuelve un ArrayList con todos los datos
     //@return datos
     public List listar(){
         String sql = "select mascotas.id, mascotas.nombre, mascotas.sexo," +
@@ -85,5 +87,35 @@ public class MascotasDAO {
             System.out.println("ERROR no se pudo listar Mascotas: " + ex);
         }
         return datos;
+    }
+    /*
+        Metodo para agregar nuevas Mascotas
+        Devuelve 1 cuando la operacion ha sido exitosa
+        @param c
+        @return 1
+    */
+    public int agregar(Mascotas c){
+        
+        String sql = "INSERT INTO mascotas (nombre, sexo, pesoKg, especie_id, raza_id, vacunacion_estado, adopcion_estado, colaborador_id)" +
+                     " VALUES (?,?,?,(SELECT id FROM especies WHERE nombre=?),(SELECT id FROM razas WHERE nombre=?),?,?,(SELECT id FROM colaboradores WHERE nombre=?))";
+        
+        try {
+            
+            con = conectar.conectar();
+            ps  = con.prepareStatement(sql);
+            ps.setString(1, c.getNombre());
+            ps.setString(2, c.getSexo());
+            ps.setString(3, c.getPesoKG());
+            ps.setString(4, c.getEspecie());
+            ps.setString(5, c.getRaza());
+            ps.setString(6, c.getVacunacionEstado());
+            ps.setString(7, c.getAdopcionEstado());
+            ps.setString(8, c.getColaborador());
+            ps.executeUpdate();
+            
+        } catch (SQLException e) {
+            System.out.println("ERROR no se pudo insertar datos: " + e);
+        }
+        return 1;
     }
 }
