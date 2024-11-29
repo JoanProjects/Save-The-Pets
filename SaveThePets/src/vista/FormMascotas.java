@@ -44,7 +44,7 @@ public class FormMascotas extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         cbVacunacion = new javax.swing.JComboBox<>();
         cbSexo = new javax.swing.JComboBox<>();
-        txtEspecie = new javax.swing.JComboBox<>();
+        cbEspecie = new javax.swing.JComboBox<>();
         txtRaza = new javax.swing.JTextField();
         txtPeso = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -157,11 +157,11 @@ public class FormMascotas extends javax.swing.JFrame {
         cbSexo.setBorder(null);
         pnlMascota.add(cbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 200, 30));
 
-        txtEspecie.setBackground(new java.awt.Color(15, 15, 15));
-        txtEspecie.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtEspecie.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Perro", "Gato", "Otros" }));
-        txtEspecie.setBorder(null);
-        pnlMascota.add(txtEspecie, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 200, 30));
+        cbEspecie.setBackground(new java.awt.Color(15, 15, 15));
+        cbEspecie.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        cbEspecie.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Perro", "Gato", "Otras" }));
+        cbEspecie.setBorder(null);
+        pnlMascota.add(cbEspecie, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 200, 30));
 
         txtRaza.setBackground(new java.awt.Color(15, 15, 15));
         txtRaza.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
@@ -354,6 +354,7 @@ public class FormMascotas extends javax.swing.JFrame {
     public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnGuardar;
     private javax.swing.JComboBox<String> cbAdopcion;
+    private javax.swing.JComboBox<String> cbEspecie;
     private javax.swing.JComboBox<String> cbSexo;
     private javax.swing.JComboBox<String> cbVacunacion;
     private javax.swing.JLabel jLabel1;
@@ -380,7 +381,6 @@ public class FormMascotas extends javax.swing.JFrame {
     private javax.swing.JPanel pnlMascota;
     public javax.swing.JTable tblMascotas;
     public javax.swing.JTextField txtBuscar;
-    private javax.swing.JComboBox<String> txtEspecie;
     public javax.swing.JTextField txtID;
     public javax.swing.JTextField txtIngresado;
     public javax.swing.JTextField txtNombre;
