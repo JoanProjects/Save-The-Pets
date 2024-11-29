@@ -163,4 +163,30 @@ public class MascotasDAO {
         }
         return r;
     }
+    /*
+        Metodo para borrar registros de Mascotas
+        Devuelve e1 numero de registros borrados
+        @param id
+        @return r
+    */
+    public int eliminar(int id){
+        
+        int r = 0;
+        
+        String sql = "DELETE FROM mascotas WHERE id="+id;
+        
+        try {
+            con = conectar.conectar();
+            ps  = con.prepareStatement(sql);
+            r   = ps.executeUpdate();
+            if(r == 1){
+                return 1;
+            }else{
+                return 0;
+            }
+        } catch (SQLException e) {
+            System.out.println("ERROR no se pudieron borrar los datos: " + e);
+        }
+        return r;
+    }
 }
