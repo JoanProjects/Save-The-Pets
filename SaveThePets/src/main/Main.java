@@ -29,7 +29,7 @@ public class Main {
             new Thread(() -> {
                 try {
                     // Esperar 10 segundos
-                    Thread.sleep(10000);
+                    Thread.sleep(5000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

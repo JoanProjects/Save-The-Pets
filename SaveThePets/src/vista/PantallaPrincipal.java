@@ -5,6 +5,7 @@ import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatArcDarkIJTheme
 import java.awt.Color;
 import javax.swing.ImageIcon;
 
+
 /**
  *
  * @author Walla Peguero
@@ -69,7 +70,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         lblSalidas.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblSalidas.setForeground(new java.awt.Color(255, 255, 255));
-        lblSalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Stock Index Up_32x32.png"))); // NOI18N
         lblSalidas.setText("Salidas");
         lblSalidas.setPreferredSize(new java.awt.Dimension(150, 150));
         lblSalidas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -83,7 +83,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         lblEntradas.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblEntradas.setForeground(new java.awt.Color(255, 255, 255));
-        lblEntradas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Stock Index Down_32x32.png"))); // NOI18N
         lblEntradas.setText("Entradas");
         lblEntradas.setPreferredSize(new java.awt.Dimension(150, 150));
         lblEntradas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -277,6 +276,12 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         

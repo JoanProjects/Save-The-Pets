@@ -36,10 +36,41 @@ public class FormMascotas extends javax.swing.JFrame {
         tblMascotas = new javax.swing.JTable();
         txtBuscar = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
-        btnActualizar = new javax.swing.JButton();
-        btnAgregar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
+        pnlMascota = new javax.swing.JPanel();
+        txtID = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        btnGuardar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        cbVacunacion = new javax.swing.JComboBox<>();
+        cbSexo = new javax.swing.JComboBox<>();
+        txtEspecie = new javax.swing.JComboBox<>();
+        txtRaza = new javax.swing.JTextField();
+        txtPeso = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel2 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel4 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jLabel5 = new javax.swing.JLabel();
+        jSeparator6 = new javax.swing.JSeparator();
+        jLabel6 = new javax.swing.JLabel();
+        jSeparator7 = new javax.swing.JSeparator();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jSeparator8 = new javax.swing.JSeparator();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        btnActualizar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        txtIngresado = new javax.swing.JTextField();
+        jSeparator9 = new javax.swing.JSeparator();
+        cbAdopcion = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Agenda de Contactos");
@@ -56,7 +87,7 @@ public class FormMascotas extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Nombre", "Sexo", "Estado De Vacunacion", "Peso", "Estado De Adopcion", "Raza", "Especie"
+                "ID", "Nombre", "Sexo", "Peso kg", "Especie", "Raza", "Estado De Vacunacion", "Estado De Adopcion", "Ingresado por"
             }
         ));
         tblMascotas.setToolTipText("");
@@ -67,65 +98,211 @@ public class FormMascotas extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblMascotas);
 
-        PnlMascota2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 880, 280));
+        PnlMascota2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 780, 480));
 
         txtBuscar.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         txtBuscar.setToolTipText("");
         txtBuscar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
-        PnlMascota2.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, 190, -1));
+        PnlMascota2.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 590, -1));
 
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Search_32x32.png"))); // NOI18N
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Search.png"))); // NOI18N
         btnBuscar.setToolTipText("Buscar contacto");
-        PnlMascota2.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 180, 90, 40));
+        PnlMascota2.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 80, 60, 40));
 
-        btnActualizar.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Update.png"))); // NOI18N
+        btnEliminar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Delete 36x36.png"))); // NOI18N
+        PnlMascota2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 80, 60, 40));
+
+        pnlMascota.setBackground(new java.awt.Color(15, 15, 15));
+        pnlMascota.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos de la Mascota", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 18), new java.awt.Color(255, 255, 255))); // NOI18N
+        pnlMascota.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtID.setEditable(false);
+        txtID.setBackground(new java.awt.Color(15, 15, 15));
+        txtID.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        txtID.setForeground(new java.awt.Color(255, 255, 255));
+        txtID.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtID.setToolTipText("");
+        txtID.setBorder(null);
+        pnlMascota.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 200, 20));
+
+        txtNombre.setBackground(new java.awt.Color(15, 15, 15));
+        txtNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtNombre.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtNombre.setToolTipText("");
+        txtNombre.setBorder(null);
+        pnlMascota.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 200, 30));
+
+        btnGuardar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Save.png"))); // NOI18N
+        btnGuardar.setText("Guardar");
+        btnGuardar.setToolTipText("Guardar datos del contacto");
+        pnlMascota.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, 150, 50));
+
+        btnCancelar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Cancelar.png"))); // NOI18N
+        btnCancelar.setText("Cancelar");
+        btnCancelar.setPreferredSize(new java.awt.Dimension(90, 30));
+        pnlMascota.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 560, 150, 50));
+
+        cbVacunacion.setBackground(new java.awt.Color(15, 15, 15));
+        cbVacunacion.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        cbVacunacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "True", "False" }));
+        cbVacunacion.setBorder(null);
+        pnlMascota.add(cbVacunacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 200, 30));
+
+        cbSexo.setBackground(new java.awt.Color(15, 15, 15));
+        cbSexo.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        cbSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Macho", "Hembra", "Hermafrodita" }));
+        cbSexo.setBorder(null);
+        pnlMascota.add(cbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 200, 30));
+
+        txtEspecie.setBackground(new java.awt.Color(15, 15, 15));
+        txtEspecie.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtEspecie.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Perro", "Gato", "Otros" }));
+        txtEspecie.setBorder(null);
+        pnlMascota.add(txtEspecie, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 200, 30));
+
+        txtRaza.setBackground(new java.awt.Color(15, 15, 15));
+        txtRaza.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtRaza.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtRaza.setToolTipText("");
+        txtRaza.setBorder(null);
+        pnlMascota.add(txtRaza, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 200, 30));
+
+        txtPeso.setBackground(new java.awt.Color(15, 15, 15));
+        txtPeso.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtPeso.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtPeso.setToolTipText("");
+        txtPeso.setBorder(null);
+        pnlMascota.add(txtPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 200, 30));
+
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Estado de");
+        pnlMascota.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 70, 30));
+
+        jSeparator1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        pnlMascota.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 200, 10));
+
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("ID/Clave");
+        pnlMascota.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 70, 30));
+
+        jSeparator2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        pnlMascota.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 200, 10));
+
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Nombre");
+        pnlMascota.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 60, 30));
+
+        jSeparator3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        pnlMascota.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 200, 10));
+
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Especie");
+        pnlMascota.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 60, 30));
+
+        jSeparator4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        pnlMascota.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 200, 10));
+
+        jSeparator5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        pnlMascota.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 200, 10));
+
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Raza");
+        pnlMascota.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 40, 30));
+
+        jSeparator6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        pnlMascota.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 200, 10));
+
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Sexo");
+        pnlMascota.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 40, 30));
+
+        jSeparator7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        pnlMascota.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 200, 10));
+
+        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText(" Adopcion");
+        pnlMascota.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 70, 20));
+
+        jLabel8.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Peso kg");
+        pnlMascota.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 60, 30));
+
+        jSeparator8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        pnlMascota.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 200, 10));
+
+        jLabel9.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Estado de");
+        pnlMascota.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 70, 30));
+
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Vacunacion");
+        pnlMascota.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, -1, 20));
+
+        btnActualizar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Actualizar.png"))); // NOI18N
         btnActualizar.setText("Actualizar");
-        PnlMascota2.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 220, 70));
+        pnlMascota.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 560, 150, 50));
 
-        btnAgregar.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar.png"))); // NOI18N
-        btnAgregar.setText("Agregar");
-        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarActionPerformed(evt);
-            }
-        });
-        PnlMascota2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 220, 70));
-
-        btnEliminar.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Delete.png"))); // NOI18N
-        btnEliminar.setText("Eliminar");
-        PnlMascota2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, 220, -1));
-
-        btnEditar.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Editar.png"))); // NOI18N
+        btnEditar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Edit.png"))); // NOI18N
         btnEditar.setText("Editar");
-        PnlMascota2.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, 220, 70));
+        pnlMascota.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 490, 150, 50));
+
+        jLabel11.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Ingresado por");
+        pnlMascota.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 420, 100, 30));
+
+        txtIngresado.setBackground(new java.awt.Color(15, 15, 15));
+        txtIngresado.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtIngresado.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtIngresado.setToolTipText("");
+        txtIngresado.setBorder(null);
+        pnlMascota.add(txtIngresado, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 200, 30));
+
+        jSeparator9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        pnlMascota.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 200, 10));
+
+        cbAdopcion.setBackground(new java.awt.Color(15, 15, 15));
+        cbAdopcion.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        cbAdopcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "True ", "False" }));
+        cbAdopcion.setBorder(null);
+        pnlMascota.add(cbAdopcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 200, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlMascota2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(pnlMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PnlMascota2, javax.swing.GroupLayout.PREFERRED_SIZE, 796, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlMascota2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PnlMascota2, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
+            .addComponent(pnlMascota, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblMascotasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMascotasMouseClicked
-        this.btnAgregar.setEnabled(false);
+        
     }//GEN-LAST:event_tblMascotasMouseClicked
-
-    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-       DatosMascotas Presentar = new DatosMascotas();
-       Presentar.setVisible(true);
-       Presentar.setLocation(200, 150);
-    }//GEN-LAST:event_btnAgregarActionPerformed
 
 
  
@@ -171,12 +348,43 @@ public class FormMascotas extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PnlMascota2;
     public javax.swing.JButton btnActualizar;
-    public javax.swing.JButton btnAgregar;
     public javax.swing.JButton btnBuscar;
+    public javax.swing.JButton btnCancelar;
     public javax.swing.JButton btnEditar;
     public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnGuardar;
+    private javax.swing.JComboBox<String> cbAdopcion;
+    private javax.swing.JComboBox<String> cbSexo;
+    private javax.swing.JComboBox<String> cbVacunacion;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JPanel pnlMascota;
     public javax.swing.JTable tblMascotas;
     public javax.swing.JTextField txtBuscar;
+    private javax.swing.JComboBox<String> txtEspecie;
+    public javax.swing.JTextField txtID;
+    public javax.swing.JTextField txtIngresado;
+    public javax.swing.JTextField txtNombre;
+    public javax.swing.JTextField txtPeso;
+    public javax.swing.JTextField txtRaza;
     // End of variables declaration//GEN-END:variables
 }

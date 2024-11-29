@@ -89,10 +89,10 @@ public class Login extends javax.swing.JFrame {
         pnlFondo.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 420, 30));
 
         ImgContra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImgContra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/image 6.png"))); // NOI18N
+        ImgContra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Password.png"))); // NOI18N
         pnlFondo.add(ImgContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 30, 30));
 
-        ImgLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/image 5.png"))); // NOI18N
+        ImgLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/user (2).png"))); // NOI18N
         ImgLogin.setPreferredSize(new java.awt.Dimension(30, 30));
         pnlFondo.add(ImgLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, -1, -1));
 
@@ -155,19 +155,19 @@ public class Login extends javax.swing.JFrame {
         lblLogin.setText("LOGIN");
         pnlFondo.add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 130, 60));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/DOG ANIMADO.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/DOG ANIMADO.png"))); // NOI18N
         pnlFondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 350, 350));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BlobsVector.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BlobsVector.png"))); // NOI18N
         pnlFondo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 300, 260));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BlobsVector-1.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BlobsVector-1.png"))); // NOI18N
         pnlFondo.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 280, 320));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BlobsVector-2.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BlobsVector-2.png"))); // NOI18N
         pnlFondo.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 270, 230));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Vector.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Vector.png"))); // NOI18N
         pnlFondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 280, 520));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

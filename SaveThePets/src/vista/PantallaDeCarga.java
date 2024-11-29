@@ -67,6 +67,7 @@ public class PantallaDeCarga extends javax.swing.JFrame {
         lblWelcome4 = new javax.swing.JLabel();
         lblVector = new javax.swing.JLabel();
         lblLoading = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -114,6 +115,9 @@ public class PantallaDeCarga extends javax.swing.JFrame {
         lblLoading.setText("Loading... ");
         jPanel1.add(lblLoading, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 390, 130, 40));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icons8-dog-heart-64.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 320, 100, 90));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -135,6 +139,7 @@ public class PantallaDeCarga extends javax.swing.JFrame {
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel Welcome;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblGestion;
     public javax.swing.JLabel lblLoading;
