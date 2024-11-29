@@ -9,12 +9,12 @@ import javax.swing.ImageIcon;
  *
  * @author Walla Peguero
  */
-public class PrincipalPrincipal extends javax.swing.JFrame {
+public class PantallaPrincipal extends javax.swing.JFrame {
    
     /**
      * Creates new form PrincipalPrincipal
      */
-    public PrincipalPrincipal() {
+    public PantallaPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
         setIconImage(new ImageIcon(getClass().getResource("/Imagenes/huella.png")).getImage()); //Imagen para el soft
@@ -227,7 +227,7 @@ public class PrincipalPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_ImgSalirMouseExited
 
     private void lblMascotasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMascotasMouseClicked
-       FormMascota Pantalla = new FormMascota();
+       FormMascotas Pantalla = new FormMascotas();
         Pantalla.setVisible(true);
     }//GEN-LAST:event_lblMascotasMouseClicked
 
@@ -269,14 +269,15 @@ public class PrincipalPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PrincipalPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PrincipalPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PrincipalPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PrincipalPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
         
          FlatArcDarkIJTheme.setup();
@@ -284,7 +285,7 @@ public class PrincipalPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PrincipalPrincipal().setVisible(true);
+                new PantallaPrincipal().setVisible(true);
             }
         });
     }

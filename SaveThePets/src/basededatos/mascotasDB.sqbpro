@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="mascotasDB.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="3060"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="accesos" custom_title="0" dock_id="1" table="4,7:mainaccesos"/><dock_state state="000000ff00000000fd00000001000000020000024800000215fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000002480000011e00ffffff000002480000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="accesos" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="35"/><column index="2" value="50"/><column index="3" value="38"/><column index="4" value="52"/><column index="5" value="52"/><column index="6" value="88"/><column index="7" value="111"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="sqlite_sequence" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="40"/><column index="2" value="35"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">CREATE TABLE accesos(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	usuario VARCHAR(255) NOT NULL UNIQUE,
+	clave VARCHAR(255),
+	nombre VARCHAR(50),
+	apellido VARCHAR(50),
+	fecha_ingreso DATETIME DEFAULT (datetime('now')),
+	fecha_actualizado DATETIME DEFAULT (datetime('now'))
+);
+
+CREATE TABLE colaboradores(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	nombre VARCHAR(50),
+	apellido VARCHAR(50),
+	identificacion VARCHAR(13) NOT NULL UNIQUE
+);
+
+CREATE TABLE especies(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	nombre VARCHAR(50)
+);
+
+CREATE TABLE razas(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	nombre VARCHAR(50),
+	especie_id INTEGER,
+	FOREIGN KEY (especie_id) REFERENCES especies(id)
+);
+
+CREATE TABLE mascotas(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	nombre VARCHAR(50),
+	sexo VARCHAR(20),
+	pesoKg REAL,
+	especie_id INTEGER,
+	raza_id INTEGER,
+	vacunacion_estado BOOLEAN,
+	adopcion_estado BOOLEAN,
+	colaborador_id INTEGER,
+	fecha_ingreso DATETIME DEFAULT (datetime('now')),
+	fecha_actualizado DATETIME DEFAULT (datetime('now')),
+	FOREIGN KEY (especie_id) REFERENCES especies(id),
+	FOREIGN KEY (raza_id) REFERENCES razas(id),
+	FOREIGN KEY (colaborador_id) REFERENCES colaboradores(id)
+);</sql><current_tab id="0"/></tab_sql></sqlb_project>
