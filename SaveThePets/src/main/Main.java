@@ -20,7 +20,7 @@ public class Main {
         } catch( Exception ex ) {
             System.err.println( "Failed to initialize LaF" );
         }
-        
+     
         SwingUtilities.invokeLater(() -> {
             PantallaDeCarga pantallaDeCarga = new PantallaDeCarga();
             pantallaDeCarga.setVisible(true);
