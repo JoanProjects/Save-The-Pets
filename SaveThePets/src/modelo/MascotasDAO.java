@@ -96,8 +96,11 @@ public class MascotasDAO {
     */
     public int agregar(Mascotas c){
         
-        String sql = "INSERT INTO mascotas (nombre, sexo, pesoKg, especie_id, raza_id, vacunacion_estado, adopcion_estado, colaborador_id)" +
-                     " VALUES (?,?,?,(SELECT id FROM especies WHERE nombre=?),(SELECT id FROM razas WHERE nombre=?),?,?,(SELECT id FROM colaboradores WHERE nombre=?))";
+        String sql = "INSERT INTO mascotas (nombre, sexo, pesoKg, especie_id, raza_id," +
+                     " vacunacion_estado, adopcion_estado, colaborador_id)" +
+                     " VALUES (?,?,?,(SELECT id FROM especies WHERE nombre=?)," +
+                     " (SELECT id FROM razas WHERE nombre=?),?,?," +
+                     " (SELECT id FROM colaboradores WHERE nombre=?))";
         
         try {
             
@@ -117,5 +120,47 @@ public class MascotasDAO {
             System.out.println("ERROR no se pudo insertar datos: " + e);
         }
         return 1;
+    }
+    /*
+        Metodo para actualizar registros de Mascotas
+        Devuelve e1 numero de registros actualizados
+        @param c
+        @return r
+    */
+    public int actualizar(Mascotas c){
+        
+        int r = 0;
+        
+        String sql = "UPDATE mascotas SET nombre=?, sexo=?, pesoKg=?,"+
+                     " especie_id = (SELECT id FROM especies WHERE nombre =?),"+
+                     " raza_id = (SELECT id FROM razas WHERE nombre=?),"+
+                     " vacunacion_estado=?, adopcion_estado=?,"+ 
+                     " colaborador_id = (SELECT id FROM colaboradores WHERE nombre=?)"+
+                     " WHERE id=?";
+        
+        try {
+            con = conectar.conectar();
+            ps  = con.prepareStatement(sql);
+            ps.setString(1, c.getNombre());
+            ps.setString(2, c.getSexo());
+            ps.setString(3, c.getPesoKG());
+            ps.setString(4, c.getEspecie());
+            ps.setString(5, c.getRaza());
+            ps.setString(6, c.getVacunacionEstado());
+            ps.setString(7, c.getAdopcionEstado());
+            ps.setString(8, c.getColaborador());
+            ps.setInt(9, c.getId());
+            r = ps.executeUpdate();
+            
+            if(r == 1){
+                return 1;
+            }else{
+                return 0;
+            }
+            
+        } catch (SQLException e) {
+            System.out.println("ERROR no se pudieron actualizar datos: " + e);
+        }
+        return r;
     }
 }
