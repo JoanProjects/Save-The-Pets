@@ -20,7 +20,6 @@ public class ControladorLogin implements ActionListener {
     public ControladorLogin(LoginV l) {
         this.loginv = l;
         this.loginv.btnIngresar.addActionListener(this);
-        limpiarCampos(l);
     }
     
      private void limpiarCampos(LoginV l) {
@@ -48,8 +47,7 @@ public class ControladorLogin implements ActionListener {
             //Campos validados!
             try {
                 //Verificar si los datos ya existen
-                if (dao.realizarLogin(usuario, clave)) {
-                    JOptionPane.showMessageDialog(loginv, "Ingresado con exito!", "Exito!", JOptionPane.INFORMATION_MESSAGE);
+                if (dao.realizarLogin(usuario, clave)) {                   
                     login.setVisible(false);
                     //Ingresando al formulario
                     PantallaPrincipal v = new PantallaPrincipal();
