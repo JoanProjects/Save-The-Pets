@@ -4,8 +4,6 @@ package main;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatArcDarkIJTheme;
 import javax.swing.SwingUtilities;
 import vista.LoginV;
-import vista.LoginV;
-import vista.PantallaDeCarga;
 import vista.PantallaDeCarga;
 import controlador.ControladorLogin;
 

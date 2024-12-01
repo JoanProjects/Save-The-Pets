@@ -6,6 +6,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;
 import vista.FormMascotas;
 import vista.LoginV;
+import vista.ManualDeUsuario;
 
 /**
  *
@@ -20,6 +21,7 @@ public class ControladorPantallaPrincipal implements MouseListener {
         this.pl.lblMascotas.addMouseListener(this);
         this.pl.lblAcercaDe.addMouseListener(this);
         this.pl.ImgSalir.addMouseListener(this);
+        this.pl.lblManual.addMouseListener(this);
     }
 
     @Override
@@ -43,6 +45,12 @@ public class ControladorPantallaPrincipal implements MouseListener {
             ControladorLogin control = new ControladorLogin(v);
             v.setVisible(true);
             pl.dispose();
+            v.setLocationRelativeTo(null);
+        }
+        
+        if (e.getSource() == pl.lblManual) {
+            ManualDeUsuario v = new ManualDeUsuario();
+            v.setVisible(true);
             v.setLocationRelativeTo(null);
         }
     }
