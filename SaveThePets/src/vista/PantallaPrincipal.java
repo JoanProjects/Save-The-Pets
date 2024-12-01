@@ -34,8 +34,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         ImgSalir = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        lblSalidas = new javax.swing.JLabel();
-        lblEntradas = new javax.swing.JLabel();
+        lblManual = new javax.swing.JLabel();
         lblMascotas = new javax.swing.JLabel();
         lblAcercaDe = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -64,32 +63,22 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jPanel1.add(ImgSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 680, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(0, 122, 204));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblSalidas.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        lblSalidas.setForeground(new java.awt.Color(255, 255, 255));
-        lblSalidas.setText("Salidas");
-        lblSalidas.setPreferredSize(new java.awt.Dimension(150, 150));
-        lblSalidas.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblManual.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        lblManual.setForeground(new java.awt.Color(255, 255, 255));
+        lblManual.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Manual.png"))); // NOI18N
+        lblManual.setText("Manual De Usaurio");
+        lblManual.setPreferredSize(new java.awt.Dimension(150, 150));
+        lblManual.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblSalidasMouseEntered(evt);
+                lblManualMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblSalidasMouseExited(evt);
+                lblManualMouseExited(evt);
             }
         });
-
-        lblEntradas.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        lblEntradas.setForeground(new java.awt.Color(255, 255, 255));
-        lblEntradas.setText("Entradas");
-        lblEntradas.setPreferredSize(new java.awt.Dimension(150, 150));
-        lblEntradas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblEntradasMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblEntradasMouseExited(evt);
-            }
-        });
+        jPanel2.add(lblManual, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 212, 60));
 
         lblMascotas.setBackground(new java.awt.Color(255, 255, 255));
         lblMascotas.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
@@ -105,6 +94,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 lblMascotasMouseExited(evt);
             }
         });
+        jPanel2.add(lblMascotas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 60));
 
         lblAcercaDe.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblAcercaDe.setForeground(new java.awt.Color(255, 255, 255));
@@ -119,31 +109,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 lblAcercaDeMouseExited(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(lblMascotas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblEntradas, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblSalidas, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblAcercaDe, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(702, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblMascotas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblEntradas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSalidas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblAcercaDe, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jPanel2.add(lblAcercaDe, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 140, 60));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 60));
 
@@ -180,9 +146,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -212,21 +176,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         ImgSalir.setForeground(new Color(255,255,255));
     }//GEN-LAST:event_ImgSalirMouseExited
 
-    private void lblSalidasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSalidasMouseExited
-        lblSalidas.setForeground(new Color(255,255,255));
-    }//GEN-LAST:event_lblSalidasMouseExited
+    private void lblManualMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblManualMouseExited
+        lblManual.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_lblManualMouseExited
 
-    private void lblSalidasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSalidasMouseEntered
-        lblSalidas.setForeground(new Color(116,116,116));
-    }//GEN-LAST:event_lblSalidasMouseEntered
-
-    private void lblEntradasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEntradasMouseExited
-        lblEntradas.setForeground(new Color(255,255,255));
-    }//GEN-LAST:event_lblEntradasMouseExited
-
-    private void lblEntradasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEntradasMouseEntered
-        lblEntradas.setForeground(new Color(116,116,116));
-    }//GEN-LAST:event_lblEntradasMouseEntered
+    private void lblManualMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblManualMouseEntered
+        lblManual.setForeground(new Color(116,116,116));
+    }//GEN-LAST:event_lblManualMouseEntered
 
     /**
      * @param args the command line arguments
@@ -261,6 +217,14 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         
          FlatArcDarkIJTheme.setup();
 
@@ -282,8 +246,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     public javax.swing.JLabel lblAcercaDe;
-    private javax.swing.JLabel lblEntradas;
+    public javax.swing.JLabel lblManual;
     public javax.swing.JLabel lblMascotas;
-    private javax.swing.JLabel lblSalidas;
     // End of variables declaration//GEN-END:variables
 }
