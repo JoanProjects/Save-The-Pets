@@ -54,9 +54,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         ImgSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/image salida 36x36.png"))); // NOI18N
         ImgSalir.setText("Exit");
         ImgSalir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ImgSalirMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 ImgSalirMouseEntered(evt);
             }
@@ -101,9 +98,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         lblMascotas.setText("Mascotas");
         lblMascotas.setPreferredSize(new java.awt.Dimension(150, 150));
         lblMascotas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblMascotasMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblMascotasMouseEntered(evt);
             }
@@ -118,9 +112,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         lblAcercaDe.setText("Acerca de");
         lblAcercaDe.setPreferredSize(new java.awt.Dimension(150, 150));
         lblAcercaDe.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblAcercaDeMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblAcercaDeMouseEntered(evt);
             }
@@ -197,10 +188,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ImgSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ImgSalirMouseClicked
-       System.exit(0);
-    }//GEN-LAST:event_ImgSalirMouseClicked
-
     private void lblMascotasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMascotasMouseEntered
         lblMascotas.setForeground(new Color(116,116,116));
     }//GEN-LAST:event_lblMascotasMouseEntered
@@ -225,11 +212,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         ImgSalir.setForeground(new Color(255,255,255));
     }//GEN-LAST:event_ImgSalirMouseExited
 
-    private void lblMascotasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMascotasMouseClicked
-       FormMascotas Pantalla = new FormMascotas();
-        Pantalla.setVisible(true);
-    }//GEN-LAST:event_lblMascotasMouseClicked
-
     private void lblSalidasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSalidasMouseExited
         lblSalidas.setForeground(new Color(255,255,255));
     }//GEN-LAST:event_lblSalidasMouseExited
@@ -245,11 +227,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private void lblEntradasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEntradasMouseEntered
         lblEntradas.setForeground(new Color(116,116,116));
     }//GEN-LAST:event_lblEntradasMouseEntered
-
-    private void lblAcercaDeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAcercaDeMouseClicked
-        AcercaDe presentar = new AcercaDe();
-        presentar.setVisible(true);
-    }//GEN-LAST:event_lblAcercaDeMouseClicked
 
     /**
      * @param args the command line arguments
@@ -296,7 +273,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ImgSalir;
+    public javax.swing.JLabel ImgSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -304,9 +281,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel lblAcercaDe;
+    public javax.swing.JLabel lblAcercaDe;
     private javax.swing.JLabel lblEntradas;
-    private javax.swing.JLabel lblMascotas;
+    public javax.swing.JLabel lblMascotas;
     private javax.swing.JLabel lblSalidas;
     // End of variables declaration//GEN-END:variables
 }
