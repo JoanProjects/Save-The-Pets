@@ -38,15 +38,15 @@ public class FormMascotas extends javax.swing.JFrame {
         btnBuscar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         pnlMascota = new javax.swing.JPanel();
-        txtID = new javax.swing.JTextField();
+        txtId = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
-        cbVacunacion = new javax.swing.JComboBox<>();
+        cbVacunacionEstado = new javax.swing.JComboBox<>();
         cbSexo = new javax.swing.JComboBox<>();
         cbEspecie = new javax.swing.JComboBox<>();
         txtRaza = new javax.swing.JTextField();
-        txtPeso = new javax.swing.JTextField();
+        txtPesoKG = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
@@ -68,9 +68,9 @@ public class FormMascotas extends javax.swing.JFrame {
         btnActualizar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        txtIngresado = new javax.swing.JTextField();
+        txtIngresadoPor = new javax.swing.JTextField();
         jSeparator9 = new javax.swing.JSeparator();
-        cbAdopcion = new javax.swing.JComboBox<>();
+        cbAdopcionEstado = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Agenda de Contactos");
@@ -117,14 +117,15 @@ public class FormMascotas extends javax.swing.JFrame {
         pnlMascota.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos de la Mascota", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 18), new java.awt.Color(255, 255, 255))); // NOI18N
         pnlMascota.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtID.setEditable(false);
-        txtID.setBackground(new java.awt.Color(15, 15, 15));
-        txtID.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        txtID.setForeground(new java.awt.Color(255, 255, 255));
-        txtID.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtID.setToolTipText("");
-        txtID.setBorder(null);
-        pnlMascota.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 200, 20));
+        txtId.setEditable(false);
+        txtId.setBackground(new java.awt.Color(15, 15, 15));
+        txtId.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        txtId.setForeground(new java.awt.Color(255, 255, 255));
+        txtId.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtId.setToolTipText("");
+        txtId.setBorder(null);
+        txtId.setEnabled(false);
+        pnlMascota.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 200, 20));
 
         txtNombre.setBackground(new java.awt.Color(15, 15, 15));
         txtNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
@@ -145,11 +146,11 @@ public class FormMascotas extends javax.swing.JFrame {
         btnCancelar.setPreferredSize(new java.awt.Dimension(90, 30));
         pnlMascota.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 560, 150, 50));
 
-        cbVacunacion.setBackground(new java.awt.Color(15, 15, 15));
-        cbVacunacion.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        cbVacunacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "True", "False" }));
-        cbVacunacion.setBorder(null);
-        pnlMascota.add(cbVacunacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 200, 30));
+        cbVacunacionEstado.setBackground(new java.awt.Color(15, 15, 15));
+        cbVacunacionEstado.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        cbVacunacionEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "True", "False" }));
+        cbVacunacionEstado.setBorder(null);
+        pnlMascota.add(cbVacunacionEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 200, 30));
 
         cbSexo.setBackground(new java.awt.Color(15, 15, 15));
         cbSexo.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
@@ -170,12 +171,12 @@ public class FormMascotas extends javax.swing.JFrame {
         txtRaza.setBorder(null);
         pnlMascota.add(txtRaza, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 200, 30));
 
-        txtPeso.setBackground(new java.awt.Color(15, 15, 15));
-        txtPeso.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtPeso.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtPeso.setToolTipText("");
-        txtPeso.setBorder(null);
-        pnlMascota.add(txtPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 200, 30));
+        txtPesoKG.setBackground(new java.awt.Color(15, 15, 15));
+        txtPesoKG.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtPesoKG.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtPesoKG.setToolTipText("");
+        txtPesoKG.setBorder(null);
+        pnlMascota.add(txtPesoKG, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 200, 30));
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -266,21 +267,21 @@ public class FormMascotas extends javax.swing.JFrame {
         jLabel11.setText("Ingresado por");
         pnlMascota.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 420, 100, 30));
 
-        txtIngresado.setBackground(new java.awt.Color(15, 15, 15));
-        txtIngresado.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtIngresado.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtIngresado.setToolTipText("");
-        txtIngresado.setBorder(null);
-        pnlMascota.add(txtIngresado, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 200, 30));
+        txtIngresadoPor.setBackground(new java.awt.Color(15, 15, 15));
+        txtIngresadoPor.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtIngresadoPor.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtIngresadoPor.setToolTipText("");
+        txtIngresadoPor.setBorder(null);
+        pnlMascota.add(txtIngresadoPor, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 200, 30));
 
         jSeparator9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         pnlMascota.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 200, 10));
 
-        cbAdopcion.setBackground(new java.awt.Color(15, 15, 15));
-        cbAdopcion.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        cbAdopcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "True ", "False" }));
-        cbAdopcion.setBorder(null);
-        pnlMascota.add(cbAdopcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 200, 30));
+        cbAdopcionEstado.setBackground(new java.awt.Color(15, 15, 15));
+        cbAdopcionEstado.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        cbAdopcionEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "True ", "False" }));
+        cbAdopcionEstado.setBorder(null);
+        pnlMascota.add(cbAdopcionEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 200, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -301,7 +302,11 @@ public class FormMascotas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblMascotasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMascotasMouseClicked
-        
+        this.btnGuardar.setEnabled(false);
+        this.btnEditar.setEnabled(true);
+        this.btnActualizar.setEnabled(false);
+        this.btnCancelar.setEnabled(true);
+        this.btnEliminar.setEnabled(true);
     }//GEN-LAST:event_tblMascotasMouseClicked
 
 
@@ -353,10 +358,10 @@ public class FormMascotas extends javax.swing.JFrame {
     public javax.swing.JButton btnEditar;
     public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnGuardar;
-    private javax.swing.JComboBox<String> cbAdopcion;
-    private javax.swing.JComboBox<String> cbEspecie;
-    private javax.swing.JComboBox<String> cbSexo;
-    private javax.swing.JComboBox<String> cbVacunacion;
+    public javax.swing.JComboBox<String> cbAdopcionEstado;
+    public javax.swing.JComboBox<String> cbEspecie;
+    public javax.swing.JComboBox<String> cbSexo;
+    public javax.swing.JComboBox<String> cbVacunacionEstado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -381,10 +386,10 @@ public class FormMascotas extends javax.swing.JFrame {
     private javax.swing.JPanel pnlMascota;
     public javax.swing.JTable tblMascotas;
     public javax.swing.JTextField txtBuscar;
-    public javax.swing.JTextField txtID;
-    public javax.swing.JTextField txtIngresado;
+    public javax.swing.JTextField txtId;
+    public javax.swing.JTextField txtIngresadoPor;
     public javax.swing.JTextField txtNombre;
-    public javax.swing.JTextField txtPeso;
+    public javax.swing.JTextField txtPesoKG;
     public javax.swing.JTextField txtRaza;
     // End of variables declaration//GEN-END:variables
 }
