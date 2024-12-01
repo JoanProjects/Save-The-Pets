@@ -24,10 +24,10 @@ public class Main {
             PantallaDeCarga pantallaDeCarga = new PantallaDeCarga();
             pantallaDeCarga.setVisible(true);
 
-            // Crear un nuevo hilo para esperar 10 segundos y luego cambiar a la pantalla de login
+            // Crear un nuevo hilo para esperar 5 segundos y luego cambiar a la pantalla de login
             new Thread(() -> {
                 try {
-                    // Esperar 10 segundos
+                    // Esperar 5 segundos
                     Thread.sleep(5000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

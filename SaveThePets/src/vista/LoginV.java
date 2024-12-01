@@ -2,8 +2,10 @@
 package vista;
 
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
-
+import javax.swing.JOptionPane;
+import modelo.LoginDAO;
 /**
  *
  * @author Walla Peguero
@@ -33,7 +35,7 @@ public class LoginV extends javax.swing.JFrame {
         btnIngresar = new javax.swing.JButton();
         ImgContra = new javax.swing.JLabel();
         ImgLogin = new javax.swing.JLabel();
-        btnTest2 = new javax.swing.JLabel();
+        btnOlvido = new javax.swing.JLabel();
         lblSeparador = new javax.swing.JLabel();
         lblCreditos = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
@@ -71,22 +73,28 @@ public class LoginV extends javax.swing.JFrame {
         ImgLogin.setPreferredSize(new java.awt.Dimension(30, 30));
         pnlFondo.add(ImgLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, -1, -1));
 
-        btnTest2.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        btnTest2.setForeground(new java.awt.Color(255, 255, 255));
-        btnTest2.setText("¿Has olvidado tu contraseña?");
-        btnTest2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnOlvido.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        btnOlvido.setForeground(new java.awt.Color(255, 255, 255));
+        btnOlvido.setText("¿Has olvidado tu contraseña?");
+        btnOlvido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnOlvidoMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnTest2MouseEntered(evt);
+                btnOlvidoMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnTest2MouseExited(evt);
+                btnOlvidoMouseExited(evt);
             }
         });
-        pnlFondo.add(btnTest2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, 200, 20));
+        pnlFondo.add(btnOlvido, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, 200, 20));
 
         lblSeparador.setForeground(new java.awt.Color(255, 255, 255));
         lblSeparador.setText("________________________________________");
         lblSeparador.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblSeparadorMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblSeparadorMouseEntered(evt);
             }
@@ -109,6 +117,11 @@ public class LoginV extends javax.swing.JFrame {
         txtUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 txtUsuarioMousePressed(evt);
+            }
+        });
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
             }
         });
         pnlFondo.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 420, -1));
@@ -162,7 +175,7 @@ public class LoginV extends javax.swing.JFrame {
     // Cambiar el color dependiendo si el mouse está dentro o no
     Color color = esMouseDentro ? new Color(116, 116, 116) : new Color(255, 255, 255);
 
-    btnTest2.setForeground(color);
+    btnOlvido.setForeground(color);
     lblSeparador.setForeground(color);
 }
 
@@ -186,13 +199,13 @@ public class LoginV extends javax.swing.JFrame {
             txtUsuario.setForeground(Color.gray);
     }//GEN-LAST:event_txtClaveMousePressed
 }
-    private void btnTest2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTest2MouseEntered
+    private void btnOlvidoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoMouseEntered
         cambiarColores(true);
-    }//GEN-LAST:event_btnTest2MouseEntered
+    }//GEN-LAST:event_btnOlvidoMouseEntered
 
-    private void btnTest2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTest2MouseExited
+    private void btnOlvidoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoMouseExited
         cambiarColores(false);
-    }//GEN-LAST:event_btnTest2MouseExited
+    }//GEN-LAST:event_btnOlvidoMouseExited
 
     private void lblSeparadorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSeparadorMouseEntered
         cambiarColores(true);
@@ -201,6 +214,24 @@ public class LoginV extends javax.swing.JFrame {
     private void lblSeparadorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSeparadorMouseExited
         cambiarColores(false);
     }//GEN-LAST:event_lblSeparadorMouseExited
+
+    private void btnOlvidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoMouseClicked
+         JOptionPane.showMessageDialog(null, "Si necesitas recuperar tu contraseña, por favor contacta a nuestro equipo de soporte."
+               + " Puedes escribirnos al correo soporte SpeedSoft@gmail.com. "
+               + "Asegúrate de incluir el nombre asociado a tu cuenta para que podamos ayudarte lo más rápido posible.\n" +
+"\n" +"Estamos aquí para asistirte. ¡Gracias por confiar en nosotros!", "Recuperación de Contraseña!", JOptionPane.ERROR_MESSAGE);
+    }//GEN-LAST:event_btnOlvidoMouseClicked
+
+    private void lblSeparadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSeparadorMouseClicked
+         JOptionPane.showMessageDialog(null, "Si necesitas recuperar tu contraseña, por favor contacta a nuestro equipo de soporte."
+               + " Puedes escribirnos al correo soporte SpeedSoft@gmail.com. "
+               + "Asegúrate de incluir el nombre asociado a tu cuenta para que podamos ayudarte lo más rápido posible.\n" +
+"\n" +"Estamos aquí para asistirte. ¡Gracias por confiar en nosotros!", "Recuperación de Contraseña!", JOptionPane.ERROR_MESSAGE);
+    }//GEN-LAST:event_lblSeparadorMouseClicked
+
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        txtClave.requestFocusInWindow();
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
 
     
@@ -213,7 +244,7 @@ public class LoginV extends javax.swing.JFrame {
     private javax.swing.JLabel ImgContra;
     private javax.swing.JLabel ImgLogin;
     public javax.swing.JButton btnIngresar;
-    private javax.swing.JLabel btnTest2;
+    private javax.swing.JLabel btnOlvido;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

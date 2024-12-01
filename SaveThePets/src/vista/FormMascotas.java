@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 public class FormMascotas extends javax.swing.JFrame {
 
     /**
-     * Creates new form ContactosSQLite
+     * Creates new form FormMascotas
      */
     public FormMascotas() {
         initComponents();
@@ -73,7 +73,6 @@ public class FormMascotas extends javax.swing.JFrame {
         cbAdopcionEstado = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Agenda de Contactos");
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
 
@@ -106,7 +105,7 @@ public class FormMascotas extends javax.swing.JFrame {
         PnlMascota2.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 590, -1));
 
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Search.png"))); // NOI18N
-        btnBuscar.setToolTipText("Buscar contacto");
+        btnBuscar.setToolTipText("");
         PnlMascota2.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 80, 60, 40));
 
         btnEliminar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -137,7 +136,7 @@ public class FormMascotas extends javax.swing.JFrame {
         btnGuardar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Save.png"))); // NOI18N
         btnGuardar.setText("Guardar");
-        btnGuardar.setToolTipText("Guardar datos del contacto");
+        btnGuardar.setToolTipText("");
         pnlMascota.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, 150, 50));
 
         btnCancelar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N

@@ -9,7 +9,6 @@ import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-
 /**
  *
  * @author Walla Peguero
@@ -21,21 +20,23 @@ public class ManualDeUsuario extends javax.swing.JFrame {
      */
     public ManualDeUsuario() {
         initComponents();
+        pnlSuperior.requestFocus();
         setIconImage(new ImageIcon(getClass().getResource("/Imagenes/huella.png")).getImage()); //Imagen para el soft
         this.setTitle("Manual De Usuario");
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); //Cerrar Ventana
-        
+
         //Codigo para meter un Jpanel dentro de otro
         ManualDeUsuario1 manual1 = new ManualDeUsuario1();
         manual1.setSize(640, 390);
         manual1.setLocation(0, 0);
-        
+
         content.removeAll();
-        content.add(manual1,BorderLayout.CENTER);
+        content.add(manual1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,6 +50,8 @@ public class ManualDeUsuario extends javax.swing.JFrame {
         pnlSuperior = new javax.swing.JPanel();
         MDU1 = new javax.swing.JButton();
         MDU2 = new javax.swing.JButton();
+        MDU3 = new javax.swing.JButton();
+        MDU4 = new javax.swing.JButton();
         content = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,17 +60,31 @@ public class ManualDeUsuario extends javax.swing.JFrame {
 
         pnlSuperior.setBackground(new java.awt.Color(0, 122, 204));
 
-        MDU1.setText("MDU1");
+        MDU1.setText("INTRODUCCION");
         MDU1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MDU1ActionPerformed(evt);
             }
         });
 
-        MDU2.setText("MDU2");
+        MDU2.setText("INSTRUCCIONES 1");
         MDU2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MDU2ActionPerformed(evt);
+            }
+        });
+
+        MDU3.setText("INSTRUCCIONES 2");
+        MDU3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MDU3ActionPerformed(evt);
+            }
+        });
+
+        MDU4.setText("Solucion de Problemas Comunes");
+        MDU4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MDU4ActionPerformed(evt);
             }
         });
 
@@ -80,7 +97,11 @@ public class ManualDeUsuario extends javax.swing.JFrame {
                 .addComponent(MDU1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MDU2)
-                .addContainerGap(478, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(MDU3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(MDU4)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         pnlSuperiorLayout.setVerticalGroup(
             pnlSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,7 +109,9 @@ public class ManualDeUsuario extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE)
                 .addGroup(pnlSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MDU1)
-                    .addComponent(MDU2))
+                    .addComponent(MDU2)
+                    .addComponent(MDU3)
+                    .addComponent(MDU4))
                 .addContainerGap())
         );
 
@@ -124,13 +147,13 @@ public class ManualDeUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void MDU1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MDU1ActionPerformed
-        
+
         ManualDeUsuario1 manual1 = new ManualDeUsuario1();
         manual1.setSize(640, 390);
         manual1.setLocation(0, 0);
-        
+
         content.removeAll();
-        content.add(manual1,BorderLayout.CENTER);
+        content.add(manual1, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
     }//GEN-LAST:event_MDU1ActionPerformed
@@ -139,12 +162,34 @@ public class ManualDeUsuario extends javax.swing.JFrame {
         ManualDeUsuario2 manual2 = new ManualDeUsuario2();
         manual2.setSize(640, 390);
         manual2.setLocation(0, 0);
-        
+
         content.removeAll();
-        content.add(manual2,BorderLayout.CENTER);
+        content.add(manual2, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
     }//GEN-LAST:event_MDU2ActionPerformed
+
+    private void MDU3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MDU3ActionPerformed
+        ManualDeUsuario3 manual3 = new ManualDeUsuario3();
+        manual3.setSize(640, 390);
+        manual3.setLocation(0, 0);
+
+        content.removeAll();
+        content.add(manual3, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+    }//GEN-LAST:event_MDU3ActionPerformed
+
+    private void MDU4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MDU4ActionPerformed
+        ManualDeUsuario4 manual4 = new ManualDeUsuario4();
+        manual4.setSize(640, 390);
+        manual4.setLocation(0, 0);
+
+        content.removeAll();
+        content.add(manual4, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+    }//GEN-LAST:event_MDU4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,7 +217,7 @@ public class ManualDeUsuario extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ManualDeUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-         FlatArcDarkIJTheme.setup();
+        FlatArcDarkIJTheme.setup();
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -185,6 +230,8 @@ public class ManualDeUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton MDU1;
     private javax.swing.JButton MDU2;
+    private javax.swing.JButton MDU3;
+    private javax.swing.JButton MDU4;
     private javax.swing.JPanel backGround;
     private javax.swing.JPanel content;
     private javax.swing.JPanel pnlSuperior;

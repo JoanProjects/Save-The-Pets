@@ -59,7 +59,11 @@
                       <Component id="MDU1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="MDU2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="478" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="MDU3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="MDU4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -70,6 +74,8 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="MDU1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="MDU2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="MDU3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="MDU4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -79,7 +85,7 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="MDU1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="MDU1"/>
+                <Property name="text" type="java.lang.String" value="INTRODUCCION"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MDU1ActionPerformed"/>
@@ -87,10 +93,26 @@
             </Component>
             <Component class="javax.swing.JButton" name="MDU2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="MDU2"/>
+                <Property name="text" type="java.lang.String" value="INSTRUCCIONES 1"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MDU2ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="MDU3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="INSTRUCCIONES 2"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MDU3ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="MDU4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Solucion de Problemas Comunes"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MDU4ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

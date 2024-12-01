@@ -5,12 +5,12 @@ package vista;
  *
  * @author Walla Peguero
  */
-public class ManualDeUsuario2 extends javax.swing.JPanel {
+public class ManualDeUsuario3 extends javax.swing.JPanel {
 
     /**
      * Creates new form ManualDeUsuario2
      */
-    public ManualDeUsuario2() {
+    public ManualDeUsuario3() {
         initComponents();
         lblTitulo.requestFocus();
     }
@@ -63,10 +63,10 @@ public class ManualDeUsuario2 extends javax.swing.JPanel {
         jTextArea3.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         jTextArea3.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea3.setRows(5);
-        jTextArea3.setText("Pantalla de Carga:\n\nAl iniciar el programa, se mostrará una pantalla\nde carga con el nombre del\nprograma.\nNo requiere interacción del usuario.\nDuración estimada: 5 segundos.");
+        jTextArea3.setText("Pantalla Principal:\n\nObjetivo: servir de intermediario entre las \ndiferentes partes del programa\nOpciones:\nMascotas. (Formulario Mascotas)\nAcerca de. (Información del Programa)\nExit (Cerrar sesión)");
         jScrollPane3.setViewportView(jTextArea3);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Pcarga.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Pprincipal.png"))); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jTextArea4.setBackground(new java.awt.Color(15, 15, 15));
@@ -74,11 +74,11 @@ public class ManualDeUsuario2 extends javax.swing.JPanel {
         jTextArea4.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         jTextArea4.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea4.setRows(5);
-        jTextArea4.setText("Pantalla de Login:\n\nObjetivos: Validar el acceso al sistema.\nPasos:\nIntroduzca su nombre de usuario en el primer \ncampo.\nIntroduzca su contraseña en el segundo campo.\nHaga clic en el botón \"ACCEDER\".\nErrores comunes:\nMensaje: \"Usuario o contraseña incorrectos\". \nSolución: Verifique las credenciales\nproporcionadas.");
+        jTextArea4.setText(" Mascotas: Registro de animales\n\n-Para Ingresar un nuevo animal al registro:\n1. Complete los campos requeridos:\n● ID /Clave.\n● Nombre.\n● Sexo: Macho, Hembra o Hermafrodita.\n● Peso kg.\n● Especie: Perro, Gato u Otras.\n● Raza.\n● Estado de Vacunación: True o False.\n● Estado de adopción: True o False.\n● Ingresado por.\n2. Presione el botón \"Guardar\".\n\n-Para eliminar un animal del registro:\n1. Haga Click sobre el registro que desee \neliminar.\n2. Presione el botón con el icono del contenedor \nde basura.\n\n-Para actualizar un animal del registro:\n1. Haga Click sobre el registro que desee\n actualizar.\n2. Presione el botón “Editar”.\n3. Edite los campos que desee modificar.\n4. Presione el botón “Actualizar”.\n\n-Para buscar un animal en el registro:\n1. Haga Click en el panel que dice “Buscar”.\n2. Escriba el nombre o alguna de las características \ndel animal que quiera\nbuscar.\n3. Haga Click en el botón con el icono de lupa para\n ver los registros de lo\nanimales.\n\nAnimales inscritos:\nMuestra los animales registrados.\nOpciones:\n● Guardar: Ingrese los datos del nuevo animal haga\n clic en “Guardar”.\n● Editar: Seleccione un registro y haga clic en \"Editar\".\n● Actualizar: Guarde los cambios haciendo click en \n“Actualizar”.\n● Eliminar: Seleccione un registro y haga clic en\n \"Eliminar\".\n● Buscar: Escriba lo que quiere buscar y haga click en \nel botón con la lupa.\n\nBotones disponibles:\n● Agregar: Para registrar nuevos animales.\n● Editar: Para editar registros.\n● Cancelar: Para cancelar un registro.\n● Actualizar: Para guardar los cambios en el registro.\n● Buscar: Para buscar un animal.\n● Eliminar: Para eliminar un animal.");
         jTextArea4.setCaretPosition(0);
         jScrollPane4.setViewportView(jTextArea4);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PLogin.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FormMascota.png"))); // NOI18N
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -91,28 +91,32 @@ public class ManualDeUsuario2 extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 15, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jScrollPane4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -1,6 +1,7 @@
 
 package vista;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
@@ -15,6 +16,7 @@ public class AcercaDe extends javax.swing.JFrame {
     public AcercaDe() {
         initComponents();
         this.setTitle("Acerca del sistema");
+        setIconImage(new ImageIcon(getClass().getResource("/Imagenes/huella.png")).getImage()); //Imagen para el soft
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); //Cerrar Ventana
     }

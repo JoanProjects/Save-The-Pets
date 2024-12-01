@@ -79,7 +79,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jScrollPane4" min="-2" pref="283" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="306" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" pref="317" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
@@ -90,25 +90,32 @@
                       <Component id="jLabel1" min="-2" pref="306" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="27" max="32767" attributes="0"/>
+              <EmptySpace pref="16" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="lblTitulo" min="-2" pref="50" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jLabel1" max="32767" attributes="0"/>
-                  <Component id="jScrollPane3" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="lblTitulo" min="-2" pref="50" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane3" min="-2" pref="149" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jScrollPane4" min="-2" pref="154" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="jScrollPane4" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel3" max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="0" pref="15" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -145,7 +152,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Pantalla de Carga:&#xa;&#xa;Al iniciar el programa, se mostrar&#xe1; una pantalla&#xa;de carga con el nombre del&#xa;programa.&#xa;No requiere interacci&#xf3;n del usuario.&#xa;Duraci&#xf3;n estimada: 5 segundos."/>
+            <Property name="text" type="java.lang.String" value="Pantalla Principal:&#xa;&#xa;Objetivo: servir de intermediario entre las &#xa;diferentes partes del programa&#xa;Opciones:&#xa;Mascotas. (Formulario Mascotas)&#xa;Acerca de. (Informaci&#xf3;n del Programa)&#xa;Exit (Cerrar sesi&#xf3;n)"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -153,7 +160,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/Pcarga.png"/>
+          <Image iconType="3" name="/imagenes/Pprincipal.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -184,7 +191,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Pantalla de Login:&#xa;&#xa;Objetivos: Validar el acceso al sistema.&#xa;Pasos:&#xa;Introduzca su nombre de usuario en el primer &#xa;campo.&#xa;Introduzca su contrase&#xf1;a en el segundo campo.&#xa;Haga clic en el bot&#xf3;n &quot;ACCEDER&quot;.&#xa;Errores comunes:&#xa;Mensaje: &quot;Usuario o contrase&#xf1;a incorrectos&quot;. &#xa;Soluci&#xf3;n: Verifique las credenciales&#xa;proporcionadas."/>
+            <Property name="text" type="java.lang.String" value=" Mascotas: Registro de animales&#xa;&#xa;-Para Ingresar un nuevo animal al registro:&#xa;1. Complete los campos requeridos:&#xa;&#x25cf; ID /Clave.&#xa;&#x25cf; Nombre.&#xa;&#x25cf; Sexo: Macho, Hembra o Hermafrodita.&#xa;&#x25cf; Peso kg.&#xa;&#x25cf; Especie: Perro, Gato u Otras.&#xa;&#x25cf; Raza.&#xa;&#x25cf; Estado de Vacunaci&#xf3;n: True o False.&#xa;&#x25cf; Estado de adopci&#xf3;n: True o False.&#xa;&#x25cf; Ingresado por.&#xa;2. Presione el bot&#xf3;n &quot;Guardar&quot;.&#xa;&#xa;-Para eliminar un animal del registro:&#xa;1. Haga Click sobre el registro que desee &#xa;eliminar.&#xa;2. Presione el bot&#xf3;n con el icono del contenedor &#xa;de basura.&#xa;&#xa;-Para actualizar un animal del registro:&#xa;1. Haga Click sobre el registro que desee&#xa; actualizar.&#xa;2. Presione el bot&#xf3;n &#x201c;Editar&#x201d;.&#xa;3. Edite los campos que desee modificar.&#xa;4. Presione el bot&#xf3;n &#x201c;Actualizar&#x201d;.&#xa;&#xa;-Para buscar un animal en el registro:&#xa;1. Haga Click en el panel que dice &#x201c;Buscar&#x201d;.&#xa;2. Escriba el nombre o alguna de las caracter&#xed;sticas &#xa;del animal que quiera&#xa;buscar.&#xa;3. Haga Click en el bot&#xf3;n con el icono de lupa para&#xa; ver los registros de lo&#xa;animales.&#xa;&#xa;Animales inscritos:&#xa;Muestra los animales registrados.&#xa;Opciones:&#xa;&#x25cf; Guardar: Ingrese los datos del nuevo animal haga&#xa; clic en &#x201c;Guardar&#x201d;.&#xa;&#x25cf; Editar: Seleccione un registro y haga clic en &quot;Editar&quot;.&#xa;&#x25cf; Actualizar: Guarde los cambios haciendo click en &#xa;&#x201c;Actualizar&#x201d;.&#xa;&#x25cf; Eliminar: Seleccione un registro y haga clic en&#xa; &quot;Eliminar&quot;.&#xa;&#x25cf; Buscar: Escriba lo que quiere buscar y haga click en &#xa;el bot&#xf3;n con la lupa.&#xa;&#xa;Botones disponibles:&#xa;&#x25cf; Agregar: Para registrar nuevos animales.&#xa;&#x25cf; Editar: Para editar registros.&#xa;&#x25cf; Cancelar: Para cancelar un registro.&#xa;&#x25cf; Actualizar: Para guardar los cambios en el registro.&#xa;&#x25cf; Buscar: Para buscar un animal.&#xa;&#x25cf; Eliminar: Para eliminar un animal."/>
             <Property name="caretPosition" type="int" value="0"/>
           </Properties>
         </Component>
@@ -193,7 +200,7 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/PLogin.png"/>
+          <Image iconType="3" name="/imagenes/FormMascota.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">

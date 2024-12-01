@@ -3,6 +3,7 @@ package controlador;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import modelo.LoginDAO;
 import modelo.Login;
@@ -66,6 +67,7 @@ public class ControladorLogin implements ActionListener {
         }
         return false;
     }
+     
      
     @Override
     public void actionPerformed(ActionEvent e) {

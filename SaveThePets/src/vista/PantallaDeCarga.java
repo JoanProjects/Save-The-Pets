@@ -81,8 +81,8 @@ public class PantallaDeCarga extends javax.swing.JFrame {
         lblGestion.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         lblGestion.setForeground(new java.awt.Color(255, 255, 255));
         lblGestion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblGestion.setText("Organiza tu tienda, cuida sus huellas");
-        jPanel1.add(lblGestion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 210, 30));
+        lblGestion.setText("Tu aliado digital para el control de cada patita.");
+        jPanel1.add(lblGestion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 270, 30));
 
         Welcome.setBackground(new java.awt.Color(255, 255, 255));
         Welcome.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
