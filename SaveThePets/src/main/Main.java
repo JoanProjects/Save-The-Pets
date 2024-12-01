@@ -3,10 +3,11 @@ package main;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatArcDarkIJTheme;
 import javax.swing.SwingUtilities;
-import vista.Login;
-import vista.Login;
+import vista.LoginV;
+import vista.LoginV;
 import vista.PantallaDeCarga;
 import vista.PantallaDeCarga;
+import controlador.ControladorLogin;
 
 /**
  * @author Walla Peguero
@@ -37,8 +38,10 @@ public class Main {
                 // Cambiar a la pantalla de login
                 SwingUtilities.invokeLater(() -> {
                     pantallaDeCarga.dispose(); // Cerrar la pantalla de carga
-                    Login pantallaLogin = new Login();
-                    pantallaLogin.setVisible(true);
+                    LoginV lv = new LoginV();
+                    ControladorLogin cl = new ControladorLogin(lv);
+                    lv.setVisible(true);
+                    lv.setLocationRelativeTo(null);
                 });
             }).start();
         });
