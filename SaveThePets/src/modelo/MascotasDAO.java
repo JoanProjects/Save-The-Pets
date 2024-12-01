@@ -20,12 +20,12 @@ public class MascotasDAO {
     //@return datos
     public List listarRegistro(String valorBuscar){
         
-        String sql = "SELECT id, nombre, sexo, pesoKg, especie_id, raza_id,"+
-                     " vacunacion_estado, adopcion_estado, colaborador_id FROM mascotas"+
-                     " WHERE id||nombre||sexo||pesoKG||vacunacion_estado like '%"+valorBuscar+"%'" +
-                     " OR especie_id =(SELECT id FROM especies WHERE nombre = '"+valorBuscar+"')" + 
-                     " OR raza_id =(SELECT id FROM razas WHERE nombre = '"+valorBuscar+"')" +
-                     " OR colaborador_id =(SELECT id FROM colaboradores WHERE nombre = '"+valorBuscar+"')";
+        String sql = "SELECT mascotas.id, mascotas.nombre, mascotas.sexo, mascotas.pesoKg, especies.nombre, razas.nombre,"+
+                     " vacunacion_estado, adopcion_estado, colaboradores.nombre FROM mascotas"+
+                     " JOIN especies ON mascotas.especie_id = especies.id" +
+                     " JOIN razas ON mascotas.raza_id = razas.id" +
+                     " JOIN colaboradores ON mascotas.colaborador_id = colaboradores.id" +
+                     " WHERE mascotas.id||mascotas.nombre||mascotas.sexo||mascotas.pesoKG||especies.nombre||razas.nombre||mascotas.vacunacion_estado||colaboradores.nombre LIKE '%"+valorBuscar+"%'";
         
         List<Mascotas>datos = new ArrayList<>();
         try{
@@ -48,7 +48,7 @@ public class MascotasDAO {
                 datos.add(c);
             }
         }catch(SQLException ex){
-            System.out.println("ERROR no se pudo listar Mascotas: " + ex);
+            System.out.println("ERROR no se pudo buscar Mascota: " + ex);
         }
         return datos;
     }
@@ -57,12 +57,12 @@ public class MascotasDAO {
     //Devuelve un ArrayList con todos los datos
     //@return datos
     public List listar(){
-        String sql = "select mascotas.id, mascotas.nombre, mascotas.sexo," +
-                     " mascotas.pesoKG, especies.nombre, razas.nombre," +
-                     " vacunacion_estado, adopcion_estado, colaboradores.nombre" +
-                    " FROM mascotas JOIN especies ON mascotas.especie_id = especies.id" + 
-                    " JOIN razas ON mascotas.raza_id = razas.id" +
-                    " JOIN colaboradores ON mascotas.colaborador_id = colaboradores.id";
+        String sql = "SELECT mascotas.id AS mascotaID, mascotas.nombre AS mascotaNombre, mascotas.sexo," +
+                     " mascotas.pesoKG, especies.nombre AS especieNombre, razas.nombre AS razaNombre," +
+                     " mascotas.vacunacion_estado, mascotas.adopcion_estado, colaboradores.nombre AS colaboradorNombre" +
+                    " FROM mascotas INNER JOIN especies ON mascotas.especie_id = especies.id" + 
+                    " INNER JOIN razas ON mascotas.raza_id = razas.id" +
+                    " INNER JOIN colaboradores ON mascotas.colaborador_id = colaboradores.id";
         List<Mascotas>datos = new ArrayList<>();
         try{
             
