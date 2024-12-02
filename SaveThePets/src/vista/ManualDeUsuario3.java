@@ -53,10 +53,12 @@ public class ManualDeUsuario3 extends javax.swing.JPanel {
         jScrollPane2.setViewportView(jTextArea2);
 
         setBackground(new java.awt.Color(15, 15, 15));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblTitulo.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
         lblTitulo.setText("Instrucciones de Uso \"Save the Pets\"");
+        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 0, 277, 50));
 
         jTextArea3.setBackground(new java.awt.Color(15, 15, 15));
         jTextArea3.setColumns(20);
@@ -66,8 +68,11 @@ public class ManualDeUsuario3 extends javax.swing.JPanel {
         jTextArea3.setText("Pantalla Principal:\n\nObjetivo: servir de intermediario entre las \ndiferentes partes del programa\nOpciones:\nMascotas. (Formulario Mascotas)\nAcerca de. (Información del Programa)\nExit (Cerrar sesión)");
         jScrollPane3.setViewportView(jTextArea3);
 
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 56, 283, 149));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Pprincipal.png"))); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(307, 25, 310, 170));
 
         jTextArea4.setBackground(new java.awt.Color(15, 15, 15));
         jTextArea4.setColumns(20);
@@ -78,46 +83,11 @@ public class ManualDeUsuario3 extends javax.swing.JPanel {
         jTextArea4.setCaretPosition(0);
         jScrollPane4.setViewportView(jTextArea4);
 
+        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 283, 164));
+
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FormMascota.png"))); // NOI18N
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jScrollPane4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(307, 210, 310, 170));
     }// </editor-fold>//GEN-END:initComponents
 
 
