@@ -38,7 +38,7 @@ public class ConexionDB {
         try {
             if (cn == null || cn.isClosed()) {
                 Class.forName("org.sqlite.JDBC");
-                cn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\PC\\Documents\\NetBeansProjects\\Save-The-Pets\\SaveThePets\\src\\basededatos\\mascotasDB.db");
+                cn = DriverManager.getConnection("jdbc:sqlite:C:\\Save-The-Pets\\SaveThePets\\src\\basededatos\\mascotasDB.db");
                 System.out.println("Conexion exitosa!");
             }
         } catch (ClassNotFoundException | SQLException sqlex) {
