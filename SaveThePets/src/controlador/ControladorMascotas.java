@@ -329,6 +329,10 @@ public class ControladorMascotas implements ActionListener {
             JOptionPane.showMessageDialog(vista, "El campo Ingresado Por, no puede estar vacio.", "ERROR!", JOptionPane.ERROR_MESSAGE);
             v.txtIngresadoPor.requestFocus();
             validacion = 0;
+        } else if (!v.txtPesoKG.getText().matches("\\d+(\\.\\d+)?")) {
+            JOptionPane.showMessageDialog(vista, "El campo Peso kg, debe ser un número.", "ERROR!", JOptionPane.ERROR_MESSAGE);
+            v.txtPesoKG.requestFocus();
+            validacion = 0;
         }
         
         return validacion;
