@@ -1,5 +1,5 @@
-# Save-The-Pets 
-## Tu aliado digital para el control de cada patita.
+![image](https://github.com/user-attachments/assets/0c90f12c-e86f-4eac-8dd7-028a9640985c)
+
 
 Los albergues de mascotas, especialmente los de reciente creación, suelen enfrentar una serie de desafíos en la gestión de sus operaciones. 
 
@@ -16,9 +16,10 @@ Este programa fue desarrollado con el fin de solventar esta problematica.
 ## Créditos
 Este proyecto utiliza:
 - JDK 23
-Librerias:
--flatLaf
--SQLite  
+
+## Librerias:
+- flatLaf
+- SQLite  
 
 # Contacto
 En caso de dudas o aportes comunicarse al:
@@ -27,9 +28,9 @@ En caso de dudas o aportes comunicarse al:
 
 # Speed Soft 
 
-Joan Arroyo 
-Wallan Peguero 
-Wilfredo Valentin Feliz Caba 
-Staisy Fortuna Tolentino 
+- Joan Arroyo 
+- Wallan Peguero 
+- Wilfredo Valentin Feliz Caba 
+- Staisy Fortuna Tolentino 
 
 Fecha de Creación: 12/11/2024 
