@@ -2,7 +2,7 @@
 
 ## Descripción
 Los albergues de mascotas, especialmente los de reciente creación, suelen enfrentar una serie de desafíos en la gestión de sus operaciones. 
-Este Save The Pets fue desarrollado con el fin de solventar esta problematica.
+Save The Pets fue desarrollado con el fin de solventar esta problematica.
 
 ## Arquitectura
 Este proyecto implementa una arquitectura Modelo-Vista-Controlador (MVC) para separar las responsabilidades de la aplicación y facilitar su mantenimiento.
