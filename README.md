@@ -1,5 +1,5 @@
-# Save-The-Pets 
-## Tu aliado digital para el control de cada patita.
+![image](https://github.com/user-attachments/assets/0c90f12c-e86f-4eac-8dd7-028a9640985c)
+
 
 Los albergues de mascotas, especialmente los de reciente creación, suelen enfrentar una serie de desafíos en la gestión de sus operaciones. 
 
