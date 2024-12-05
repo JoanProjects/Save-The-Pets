@@ -27,9 +27,9 @@ En caso de dudas o aportes comunicarse al:
 
 # Speed Soft 
 
-Joan Arroyo 
-Wallan Peguero 
-Wilfredo Valentin Feliz Caba 
-Staisy Fortuna Tolentino 
+- Joan Arroyo 
+- Wallan Peguero 
+- Wilfredo Valentin Feliz Caba 
+- Staisy Fortuna Tolentino 
 
 Fecha de Creación: 12/11/2024 
