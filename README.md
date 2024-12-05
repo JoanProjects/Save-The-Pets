@@ -1,4 +1,5 @@
-# Save-The-Pets tu aliado digital para el control de cada patita.
+# Save-The-Pets 
+Tu aliado digital para el control de cada patita.
 
 Los albergues de mascotas, especialmente los de reciente creación, suelen enfrentar una serie de desafíos en la gestión de sus operaciones. 
 
