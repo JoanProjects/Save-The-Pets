@@ -22,15 +22,34 @@ Este proyecto utiliza:
 - SQLite  
 
 # Contacto
-En caso de dudas o aportes comunicarse al:
-8098578140
+En caso de dudas o aportes comunicarse a los siguientes contactos:
+- 8098578140
+- speedsofttechnology@gmail.com
  
 
-# Speed Soft 
+# SpeedSoft 
 
-- Joan Arroyo 
-- Wallan Peguero 
-- Wilfredo Valentin Feliz Caba 
-- Staisy Fortuna Tolentino 
+<table style="width:100%; border-collapse: collapse;">
+  <tr style="border: 1px solid black;">
+    <th style="border: 1px solid black; padding: 8px;">Name</th>
+    <th style="border: 1px solid black; padding: 8px;">Role</th>
+  </tr>
+  <tr style="border: 1px solid black;">
+    <td style="border: 1px solid black; padding: 8px;">Joan Arroyo</td>
+    <td style="border: 1px solid black; padding: 8px;">Team Lead, Backend Dev, DBM</td>
+  </tr>
+  <tr style="border: 1px solid black;">
+    <td style="border: 1px solid black; padding: 8px;">Wallan Peguero</td>
+    <td style="border: 1px solid black; padding: 8px;">Lead Frontend Developer, Software Designer</td>
+  </tr>
+  <tr style="border: 1px solid black;">
+    <td style="border: 1px solid black; padding: 8px;">Wilfredo Valentin Feliz Caba</td>
+    <td style="border: 1px solid black; padding: 8px;">Backend Developer, QA</td>
+  </tr>
+  <tr style="border: 1px solid black;">
+    <td style="border: 1px solid black; padding: 8px;">Staisy Fortuna Tolentino</td>
+    <td style="border: 1px solid black; padding: 8px;">Frontend Developer, Documentarian</td>
+  </tr>
+</table>
 
 Fecha de Creación: 12/11/2024 
