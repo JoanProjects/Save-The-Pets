@@ -1,10 +1,8 @@
 ![image](https://github.com/user-attachments/assets/0c90f12c-e86f-4eac-8dd7-028a9640985c)
 
-## Save-The-Pets: Gestión de Albergues de Mascotas
-
 ## Descripción
 Los albergues de mascotas, especialmente los de reciente creación, suelen enfrentar una serie de desafíos en la gestión de sus operaciones. 
-Este programa fue desarrollado con el fin de solventar esta problematica.
+Este Save The Pets fue desarrollado con el fin de solventar esta problematica.
 
 ## Arquitectura
 Este proyecto implementa una arquitectura Modelo-Vista-Controlador (MVC) para separar las responsabilidades de la aplicación y facilitar su mantenimiento.
@@ -13,9 +11,9 @@ Este proyecto implementa una arquitectura Modelo-Vista-Controlador (MVC) para se
   
 * **Vista:** (Java Swing con FlatLaf)  Proporciona la interfaz de usuario.  Utiliza Java Swing para crear los componentes de la interfaz y FlatLaf para proporcionar un estilo visual mejorado y moderno.
   
-* **Controlador:** (Java)  Maneja las interacciones del usuario con la aplicación.  Recibe las acciones del usuario (ej., clicks de botones) desde la vista, las procesa y actualiza el modelo.  Luego, notifica a la vista para que se actualice con los nuevos datos.
+* **Controlador:** (Java)  Maneja las interacciones del usuario con la aplicación.  Recibe las acciones del usuario desde la vista, las procesa y actualiza el modelo.  Luego, notifica a la vista para que se actualice con los nuevos datos.
   
-* **Base de datos:** (SQLite)  Almacena de forma persistente los datos del modelo.  Se utiliza SQLite por su sencillez y por ser un SGBD ligero, adecuado para esta aplicación.
+* **Base de datos:** (SQLite)  Almacena de forma persistente los datos del modelo.  Se utiliza SQLite por su sencillez y por ser un DBMS ligero, adecuado para esta aplicación.
 
 ## Tecnologías
 * **Java:** Versión JDK 23
