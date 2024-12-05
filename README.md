@@ -1,5 +1,5 @@
 # Save-The-Pets 
-Tu aliado digital para el control de cada patita.
+## Tu aliado digital para el control de cada patita.
 
 Los albergues de mascotas, especialmente los de reciente creación, suelen enfrentar una serie de desafíos en la gestión de sus operaciones. 
 
@@ -16,9 +16,9 @@ Este programa fue desarrollado con el fin de solventar esta problematica.
 ## Créditos
 Este proyecto utiliza:
 - JDK 23
-- Librerias:
-  -FlatLaf
-  -SQLite  
+Librerias:
+-flatLaf
+-SQLite  
 
 # Contacto
 En caso de dudas o aportes comunicarse al:
