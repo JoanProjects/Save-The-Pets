@@ -68,7 +68,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         lblManual.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblManual.setForeground(new java.awt.Color(255, 255, 255));
         lblManual.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Manual.png"))); // NOI18N
-        lblManual.setText("Manual De Usaurio");
+        lblManual.setText("Manual De Usuario");
         lblManual.setPreferredSize(new java.awt.Dimension(150, 150));
         lblManual.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
