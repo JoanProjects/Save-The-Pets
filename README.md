@@ -16,7 +16,8 @@ Este programa fue desarrollado con el fin de solventar esta problematica.
 ## Créditos
 Este proyecto utiliza:
 - JDK 23
-Librerias:
+
+## Librerias:
 - flatLaf
 - SQLite  
 
