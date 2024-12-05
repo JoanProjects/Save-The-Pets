@@ -10,8 +10,11 @@ Este programa fue desarrollado con el fin de solventar esta problematica.
 Este proyecto implementa una arquitectura Modelo-Vista-Controlador (MVC) para separar las responsabilidades de la aplicación y facilitar su mantenimiento.
 
 * **Modelo:** (Java)  Gestiona los datos y la lógica de negocio.  Incluye las clases que representan los datos (mascotas, usuarios, etc.) y las operaciones que se pueden realizar sobre ellos.
+  
 * **Vista:** (Java Swing con FlatLaf)  Proporciona la interfaz de usuario.  Utiliza Java Swing para crear los componentes de la interfaz y FlatLaf para proporcionar un estilo visual mejorado y moderno.
+  
 * **Controlador:** (Java)  Maneja las interacciones del usuario con la aplicación.  Recibe las acciones del usuario (ej., clicks de botones) desde la vista, las procesa y actualiza el modelo.  Luego, notifica a la vista para que se actualice con los nuevos datos.
+  
 * **Base de datos:** (SQLite)  Almacena de forma persistente los datos del modelo.  Se utiliza SQLite por su sencillez y por ser un SGBD ligero, adecuado para esta aplicación.
 
 ## Tecnologías
