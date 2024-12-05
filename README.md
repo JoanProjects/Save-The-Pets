@@ -17,8 +17,8 @@ Este programa fue desarrollado con el fin de solventar esta problematica.
 Este proyecto utiliza:
 - JDK 23
 Librerias:
--flatLaf
--SQLite  
+- flatLaf
+- SQLite  
 
 # Contacto
 En caso de dudas o aportes comunicarse al:
