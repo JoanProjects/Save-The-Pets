@@ -153,8 +153,8 @@ public class AcercaDe extends javax.swing.JFrame {
 
         jLabel16.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("SpeedSoft@gmail.com");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 150, 30));
+        jLabel16.setText("speedsofttechnology@gmail.com");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 210, 30));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jLabel17.setText("La reproduccion o distribucion no autorizada de este programa o de cualquier parte del mismo esta penada por la ley.");

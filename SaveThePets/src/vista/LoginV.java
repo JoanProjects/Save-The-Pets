@@ -263,7 +263,7 @@ public class LoginV extends javax.swing.JFrame {
     */
     private void btnOlvidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoMouseClicked
          JOptionPane.showMessageDialog(null, "Si necesitas recuperar tu contraseña, por favor contacta a nuestro equipo de soporte."
-               + " Puedes escribirnos al correo soporte SpeedSoft@gmail.com. "
+               + " Puedes escribirnos al correo soporte speedsofttechnology@gmail.com. "
                + "Asegúrate de incluir el nombre asociado a tu cuenta para que podamos ayudarte lo más rápido posible.\n" +
 "\n" +"Estamos aquí para asistirte. ¡Gracias por confiar en nosotros!", "Recuperación de Contraseña!", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_btnOlvidoMouseClicked
@@ -274,7 +274,7 @@ public class LoginV extends javax.swing.JFrame {
     */
     private void lblSeparadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSeparadorMouseClicked
          JOptionPane.showMessageDialog(null, "Si necesitas recuperar tu contraseña, por favor contacta a nuestro equipo de soporte."
-               + " Puedes escribirnos al correo soporte SpeedSoft@gmail.com. "
+               + " Puedes escribirnos al correo soporte speedsofttechnology@gmail.com. "
                + "Asegúrate de incluir el nombre asociado a tu cuenta para que podamos ayudarte lo más rápido posible.\n" +
 "\n" +"Estamos aquí para asistirte. ¡Gracias por confiar en nosotros!", "Recuperación de Contraseña!", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_lblSeparadorMouseClicked
