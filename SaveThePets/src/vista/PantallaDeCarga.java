@@ -1,14 +1,10 @@
-
 package vista;
-
 
 import javax.swing.ImageIcon;
 import javax.swing.SwingUtilities;
 
-
-
 /**
- *
+ * Clase que representa la pantalla de carga de la aplicación.
  * @author Walla Peguero
  */
 public class PantallaDeCarga extends javax.swing.JFrame {
@@ -16,41 +12,48 @@ public class PantallaDeCarga extends javax.swing.JFrame {
     /**
      * Creates new form PantallaDeCarga
      */
+    /**
+     * Constructor de la clase PantallaDeCarga.
+     * Inicializa los componentes, establece el icono, la posición de la ventana y comienza el efecto de carga.
+     */
     public PantallaDeCarga() {
         initComponents();
         iniciarEfectoLoading();
         setIconImage(new ImageIcon(getClass().getResource("/Imagenes/huella.png")).getImage()); //Imagen para el soft
-        setLocationRelativeTo(null); // Funcion para que la ventana aparezca centralizada 
-        
+        setLocationRelativeTo(null); // Función para que la ventana aparezca centralizada 
     }
+
+    /**
+     * Inicia el efecto de carga con puntos suspensivos animados.
+     */
     private void iniciarEfectoLoading() {
-    // Crear un hilo para el efecto de puntos
-    new Thread(() -> {
-        int duracion = 30; // Número de ciclos del efecto
-        int delay = 500;   // Tiempo de espera entre cada cambio en milisegundos
+        // Crear un hilo para el efecto de puntos
+        new Thread(() -> {
+            int duracion = 30; // Número de ciclos del efecto
+            int delay = 500;   // Tiempo de espera entre cada cambio en milisegundos
 
-        for (int i = 0; i < duracion; i++) {
-            // Generar los puntos suspensivos según el ciclo
-            String puntos = switch (i % 3) {
-                case 0 -> ".";
-                case 1 -> "..";
-                case 2 -> "...";
-                default -> "";
-            };    
+            for (int i = 0; i < duracion; i++) {
+                // Generar los puntos suspensivos según el ciclo
+                String puntos = switch (i % 3) {
+                    case 0 -> ".";
+                    case 1 -> "..";
+                    case 2 -> "...";
+                    default -> "";
+                };    
 
-            // Actualizar el texto del JLabel
-            final String textoActualizado = "Loading" + puntos;
-            SwingUtilities.invokeLater(() -> lblLoading.setText(textoActualizado));
+                // Actualizar el texto del JLabel usando SwingUtilities.invokeLater para asegurar la actualización en el hilo de eventos de Swing
+                final String textoActualizado = "Loading" + puntos;
+                SwingUtilities.invokeLater(() -> lblLoading.setText(textoActualizado));
 
-            // Pausar el hilo
-            try {
-                Thread.sleep(delay);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                // Pausar el hilo
+                try {
+                    Thread.sleep(delay);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
-        }
-    }).start();
-}
+        }).start();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -14,7 +14,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 /**
- *
+ * Controlador para la gestión de mascotas.
  * @author JoanArroyo
  */
 public class ControladorMascotas implements ActionListener {
@@ -24,6 +24,11 @@ public class ControladorMascotas implements ActionListener {
     FormMascotas vista = new FormMascotas();
     DefaultTableModel modelo = new DefaultTableModel();
     
+    /**
+     * Constructor del controlador de mascotas.
+     * Inicializa la vista, agrega listeners a los botones y muestra la lista de mascotas.
+     * @param v La vista del formulario de mascotas.
+     */
     public ControladorMascotas(FormMascotas v) {
         this.vista = v;
         this.vista.btnGuardar.addActionListener(this);
@@ -46,6 +51,9 @@ public class ControladorMascotas implements ActionListener {
         listar(vista.tblMascotas);
     }
     
+    /**
+     * Limpia la tabla de mascotas.
+     */
     public void limpiarTabla() {
         for (int i = 0; i < vista.tblMascotas.getRowCount(); i++) {
             modelo.removeRow(i);
@@ -53,6 +61,10 @@ public class ControladorMascotas implements ActionListener {
         }
     }
     
+    /**
+     * Limpia los campos del formulario de mascotas.
+     * @param v El formulario de mascotas.
+     */
     public final void limpiarCampos(FormMascotas v) {
         vista.txtId.setText("");
         vista.txtNombre.setText("");
@@ -66,6 +78,10 @@ public class ControladorMascotas implements ActionListener {
         vista.txtNombre.requestFocus();
     }
 
+    /**
+     * Lista las mascotas filtradas por el texto de búsqueda en una tabla.
+     * @param tabla La tabla donde se mostrarán las mascotas.
+     */
     public void listarMascota(JTable tabla) {
         limpiarTabla();
         modelo = (DefaultTableModel) tabla.getModel();
@@ -86,6 +102,10 @@ public class ControladorMascotas implements ActionListener {
         vista.tblMascotas.setModel(modelo);
     }
     
+    /**
+     * Lista todas las mascotas en una tabla.
+     * @param tabla La tabla donde se mostrarán las mascotas.
+     */
     public final void listar(JTable tabla) {
         limpiarTabla();
         modelo = (DefaultTableModel) tabla.getModel();
@@ -106,6 +126,9 @@ public class ControladorMascotas implements ActionListener {
         vista.tblMascotas.setModel(modelo);
     }
     
+    /**
+     * Clase interna para capturar la salida de la consola.
+     */
     public class ConsoleOutputCapture {
         private static ByteArrayOutputStream baos;
         private static PrintStream oldStream;
@@ -124,6 +147,11 @@ public class ControladorMascotas implements ActionListener {
         }
     }
     
+    /**
+     * Verifica si la salida de la consola contiene errores específicos.
+     * @param input La salida de la consola.
+     * @return True si se encuentra un error, false en caso contrario.
+     */
     public boolean verificacionErroresDeConsola(String input) {
         boolean esUnError;
       
@@ -144,6 +172,9 @@ public class ControladorMascotas implements ActionListener {
         return esUnError;
     }   
     
+    /**
+     * Agrega una nueva mascota a la base de datos.
+     */
     public void agregar() {
 
         int r;
@@ -187,6 +218,9 @@ public class ControladorMascotas implements ActionListener {
         }
     }
     
+    /**
+     * Edita una mascota seleccionada en la tabla.
+     */
     public void editar() {
 
         int fila = vista.tblMascotas.getSelectedRow();
@@ -220,6 +254,9 @@ public class ControladorMascotas implements ActionListener {
         }
     }
     
+    /**
+     * Actualiza los datos de una mascota en la base de datos.
+     */
     public void actualizar() {
         int r;
 
@@ -273,6 +310,9 @@ public class ControladorMascotas implements ActionListener {
         }
     }
     
+    /**
+     * Elimina una mascota de la base de datos.
+     */
     public void eliminar() {
 
         int fila = vista.tblMascotas.getSelectedRow();
@@ -293,6 +333,11 @@ public class ControladorMascotas implements ActionListener {
         }
     }
     
+    /**
+     * Valida los campos del formulario de mascotas.
+     * @param v El formulario de mascotas.
+     * @return 1 si los campos son válidos, 0 en caso contrario.
+     */
     public int validarCampos(FormMascotas v) {
 
         int validacion = 1;
@@ -338,6 +383,10 @@ public class ControladorMascotas implements ActionListener {
         return validacion;
     }
     
+    /**
+     * Maneja los eventos de los botones del formulario.
+     * @param e El evento ActionEvent.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.btnGuardar) {

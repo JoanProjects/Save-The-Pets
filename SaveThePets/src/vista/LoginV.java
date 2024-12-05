@@ -1,4 +1,3 @@
-
 package vista;
 
 import java.awt.Color;
@@ -6,19 +5,24 @@ import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import modelo.LoginDAO;
+
 /**
- *
+ * Vista del formulario de inicio de sesión.
  * @author Walla Peguero
  */
 public class LoginV extends javax.swing.JFrame {
 
-    
+    /**
+     * Constructor de la clase LoginV.
+     * Inicializa los componentes, establece el título, icono y posición de la ventana.
+     * Da el foco al botón de Ingresar.
+     */
     public LoginV() {
         initComponents();
-        this.setTitle("Save The Pets"); // Titulo del Software
+        this.setTitle("Save The Pets"); // Título del Software
         setIconImage(new ImageIcon(getClass().getResource("/Imagenes/huella.png")).getImage()); //Imagen para el soft
-        setLocationRelativeTo(null); // Funcion para que la ventana aparezca centralizada
-        btnIngresar.requestFocusInWindow(); // Funcion para darle el Focus a PnlAcceder        
+        setLocationRelativeTo(null); // Función para que la ventana aparezca centralizada
+        btnIngresar.requestFocusInWindow(); // Función para darle el foco al botón Ingresar
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -171,24 +175,45 @@ public class LoginV extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    /**
+    * Cambia el color de los componentes btnOlvido y lblSeparador dependiendo de si el ratón está sobre ellos o no.
+    * @param esMouseDentro  <code>true</code> si el ratón está sobre los componentes, <code>false</code> en caso contrario.
+    */
     private void cambiarColores(boolean esMouseDentro) {
-    // Cambiar el color dependiendo si el mouse está dentro o no
-    Color color = esMouseDentro ? new Color(116, 116, 116) : new Color(255, 255, 255);
+        // Cambiar el color dependiendo si el mouse está dentro o no
+        Color color = esMouseDentro ? new Color(116, 116, 116) : new Color(255, 255, 255);
 
-    btnOlvido.setForeground(color);
-    lblSeparador.setForeground(color);
-}
-
+        btnOlvido.setForeground(color);
+        lblSeparador.setForeground(color);
+    }
+    /**
+    * Maneja el evento de clic del ratón en el campo de usuario.
+    * Limpia el campo si contiene "USUARIO" y establece el color del texto a blanco.
+    * Si el campo de contraseña está vacío, lo establece en "**********" y el color del texto a gris.
+    * @param evt El evento MouseEvent.
+    */
     private void txtUsuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuarioMousePressed
-          if (txtUsuario.getText().equals("USUARIO")) {
+        /**
+          * Verifica si el campo de usuario contiene el texto "USUARIO" y lo limpia si es así.  Cambia el color del texto a blanco.
+         */
+        if (txtUsuario.getText().equals("USUARIO")) {
             txtUsuario.setText("");
             txtUsuario.setForeground(Color.white);
         }
+        /**
+        * Verifica si el campo de contraseña está vacío y lo establece en "**********" si lo está. Cambia el color del texto a gris.
+        */
         if(String.valueOf(txtClave.getPassword()).isEmpty()) {
             txtClave.setText("**********");
             txtClave.setForeground(Color.gray);
     }//GEN-LAST:event_txtUsuarioMousePressed
-}
+    }
+    /**
+    * Maneja el evento de clic del ratón en el campo de contraseña.
+    * Limpia el campo si contiene "**********" y establece el color del texto a blanco.
+    * Si el campo de usuario está vacío, lo establece en "USUARIO" y el color del texto a gris.
+    * @param evt El evento MouseEvent.
+    */
     private void txtClaveMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtClaveMousePressed
           if(String.valueOf(txtClave.getPassword()).equals("**********")) {
             txtClave.setText("");
@@ -199,36 +224,65 @@ public class LoginV extends javax.swing.JFrame {
             txtUsuario.setForeground(Color.gray);
     }//GEN-LAST:event_txtClaveMousePressed
 }
+    /**
+    * Maneja el evento de entrada del ratón sobre el botón "Olvido".
+    * Cambia el color de los componentes btnOlvido y lblSeparador.
+    * @param evt El evento MouseEvent.
+    */
     private void btnOlvidoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoMouseEntered
         cambiarColores(true);
     }//GEN-LAST:event_btnOlvidoMouseEntered
-
+    /**
+    * Maneja el evento de salida del ratón del botón "Olvido".
+    * Cambia el color de los componentes btnOlvido y lblSeparador.
+    * @param evt El evento MouseEvent.
+    */
     private void btnOlvidoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoMouseExited
         cambiarColores(false);
     }//GEN-LAST:event_btnOlvidoMouseExited
-
+    /**
+    * Maneja el evento de entrada del ratón sobre la etiqueta "Separador".
+    * Cambia el color de los componentes btnOlvido y lblSeparador.
+    * @param evt El evento MouseEvent.
+    */
     private void lblSeparadorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSeparadorMouseEntered
         cambiarColores(true);
     }//GEN-LAST:event_lblSeparadorMouseEntered
-
+    /**
+     * Maneja el evento de salida del ratón de la etiqueta "Separador".
+     * Cambia el color de los componentes btnOlvido y lblSeparador.
+     * @param evt El evento MouseEvent.
+     */
     private void lblSeparadorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSeparadorMouseExited
         cambiarColores(false);
     }//GEN-LAST:event_lblSeparadorMouseExited
-
+    /**
+    * Maneja el evento de clic del ratón en el botón "Olvido".
+    * Muestra un mensaje con instrucciones para recuperar la contraseña.
+    * @param evt El evento MouseEvent.
+    */
     private void btnOlvidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoMouseClicked
          JOptionPane.showMessageDialog(null, "Si necesitas recuperar tu contraseña, por favor contacta a nuestro equipo de soporte."
                + " Puedes escribirnos al correo soporte SpeedSoft@gmail.com. "
                + "Asegúrate de incluir el nombre asociado a tu cuenta para que podamos ayudarte lo más rápido posible.\n" +
 "\n" +"Estamos aquí para asistirte. ¡Gracias por confiar en nosotros!", "Recuperación de Contraseña!", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_btnOlvidoMouseClicked
-
+    /**
+    * Maneja el evento de clic del ratón en la etiqueta "Separador".
+    * Muestra un mensaje con instrucciones para recuperar la contraseña.
+    * @param evt El evento MouseEvent.
+    */
     private void lblSeparadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSeparadorMouseClicked
          JOptionPane.showMessageDialog(null, "Si necesitas recuperar tu contraseña, por favor contacta a nuestro equipo de soporte."
                + " Puedes escribirnos al correo soporte SpeedSoft@gmail.com. "
                + "Asegúrate de incluir el nombre asociado a tu cuenta para que podamos ayudarte lo más rápido posible.\n" +
 "\n" +"Estamos aquí para asistirte. ¡Gracias por confiar en nosotros!", "Recuperación de Contraseña!", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_lblSeparadorMouseClicked
-
+    /**
+    * Maneja el evento de acción realizada en el campo de usuario.
+    * Establece el foco en el campo de contraseña.
+    * @param evt El evento ActionEvent.
+    */
     private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
         txtClave.requestFocusInWindow();
     }//GEN-LAST:event_txtUsuarioActionPerformed

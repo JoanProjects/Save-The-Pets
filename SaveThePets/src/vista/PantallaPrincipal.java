@@ -1,19 +1,21 @@
-
 package vista;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatArcDarkIJTheme;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 
-
 /**
- *
+ * Ventana principal de la aplicación "Save The Pets".
  * @author Walla Peguero
  */
 public class PantallaPrincipal extends javax.swing.JFrame {
-   
+
     /**
      * Creates new form PrincipalPrincipal
+     */
+    /**
+     * Constructor de la clase PantallaPrincipal.
+     * Inicializa los componentes, establece la posición y el título de la ventana, y configura la imagen del icono.
      */
     public PantallaPrincipal() {
         initComponents();

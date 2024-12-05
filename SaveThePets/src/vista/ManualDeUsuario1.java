@@ -1,17 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package vista;
 
 /**
- *
+ * Panel que representa la sección de Introducción del manual de usuario.
  * @author Walla Peguero
  */
 public class ManualDeUsuario1 extends javax.swing.JPanel {
 
     /**
      * Creates new form ManualDeUsuario1
+     */
+    /**
+     * Constructor del panel ManualDeUsuario1.
+     * Inicializa los componentes y establece el foco en la etiqueta de título.
      */
     public ManualDeUsuario1() {
         initComponents();

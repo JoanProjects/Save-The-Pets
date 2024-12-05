@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * DAO para Mascotas
+ * Data Access Object (DAO) para la gestión de mascotas en la base de datos.
  * @author JoanArroyo
  */
 public class MascotasDAO {
@@ -14,11 +14,13 @@ public class MascotasDAO {
     PreparedStatement ps;
     ResultSet         rs;
 
-    //Listar registro de mascotas a buscar
-    //Devuelve un arrayList con el resultado de los datos buscados
-    //@param valorBuscar
-    //@return datos
-    public List listarRegistro(String valorBuscar){
+    /**
+     * Lista los registros de mascotas que coinciden con un valor de búsqueda.
+     * Devuelve un ArrayList con los resultados de la búsqueda.
+     * @param valorBuscar El valor a buscar en los datos de las mascotas.
+     * @return Una lista de objetos Mascotas que coinciden con la búsqueda.
+     */
+    public List<Mascotas> listarRegistro(String valorBuscar){
         
         String sql = "SELECT mascotas.id, mascotas.nombre, mascotas.sexo, mascotas.pesoKg, especies.nombre, razas.nombre,"+
                      " vacunacion_estado, adopcion_estado, colaboradores.nombre FROM mascotas"+
@@ -53,10 +55,12 @@ public class MascotasDAO {
         return datos;
     }
     
-    //Metodo lista todos los registros en Mascotas
-    //Devuelve un ArrayList con todos los datos
-    //@return datos
-    public List listar(){
+    /**
+     * Lista todos los registros de mascotas en la base de datos.
+     * Devuelve un ArrayList con todos los datos.
+     * @return Una lista de todos los objetos Mascotas.
+     */
+    public List<Mascotas> listar(){
         String sql = "SELECT mascotas.id AS mascotaID, mascotas.nombre AS mascotaNombre, mascotas.sexo," +
                      " mascotas.pesoKG, especies.nombre AS especieNombre, razas.nombre AS razaNombre," +
                      " mascotas.vacunacion_estado, mascotas.adopcion_estado, colaboradores.nombre AS colaboradorNombre" +
@@ -88,12 +92,12 @@ public class MascotasDAO {
         }
         return datos;
     }
-    /*
-        Metodo para agregar nuevas Mascotas
-        Devuelve 1 cuando la operacion ha sido exitosa
-        @param c
-        @return 1
-    */
+    /**
+     * Agrega una nueva mascota a la base de datos.
+     * Devuelve 1 cuando la operación ha sido exitosa.
+     * @param c El objeto Mascota a agregar.
+     * @return 1 si la mascota se agregó correctamente.
+     */
     public int agregar(Mascotas c){
         
         String sql = "INSERT INTO mascotas (nombre, sexo, pesoKg, especie_id, raza_id," +
@@ -121,12 +125,12 @@ public class MascotasDAO {
         }
         return 1;
     }
-    /*
-        Metodo para actualizar registros de Mascotas
-        Devuelve e1 numero de registros actualizados
-        @param c
-        @return r
-    */
+    /**
+     * Actualiza los datos de una mascota en la base de datos.
+     * Devuelve el número de registros actualizados.
+     * @param c El objeto Mascota con los datos actualizados.
+     * @return El número de registros actualizados (1 si la actualización fue exitosa).
+     */
     public int actualizar(Mascotas c){
         
         int r = 0;
@@ -163,12 +167,12 @@ public class MascotasDAO {
         }
         return r;
     }
-    /*
-        Metodo para borrar registros de Mascotas
-        Devuelve e1 numero de registros borrados
-        @param id
-        @return r
-    */
+    /**
+     * Elimina una mascota de la base de datos.
+     * Devuelve el número de registros eliminados.
+     * @param id El ID de la mascota a eliminar.
+     * @return El número de registros eliminados (1 si la eliminación fue exitosa).
+     */
     public int eliminar(int id){
         
         int r = 0;

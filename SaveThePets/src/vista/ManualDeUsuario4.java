@@ -1,15 +1,17 @@
-
 package vista;
 
-
 /**
- *
+ * Panel que representa la sección de solución de problemas comunes del manual de usuario.
  * @author Walla Peguero
  */
 public class ManualDeUsuario4 extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManualDeUsuario2
+     * Creates new form ManualDeUsuario4
+     */
+    /**
+     * Constructor del panel ManualDeUsuario4.
+     * Inicializa los componentes y establece el foco en la etiqueta de título.
      */
     public ManualDeUsuario4() {
         initComponents();

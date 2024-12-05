@@ -9,13 +9,19 @@ import vista.LoginV;
 import vista.ManualDeUsuario;
 
 /**
- *
+ * Controlador para la pantalla principal de la aplicación.
+ * Maneja las acciones de los elementos de la interfaz.
  * @author WilfredoFC
  */
 public class ControladorPantallaPrincipal implements MouseListener {
     PantallaPrincipal pl = new PantallaPrincipal();
     AcercaDe ad = new AcercaDe();
 
+    /**
+     * Constructor del controlador de la pantalla principal.
+     * Agrega listeners a los elementos de la interfaz.
+     * @param pp La instancia de la pantalla principal.
+     */
     public ControladorPantallaPrincipal(PantallaPrincipal pp) {
         this.pl = pp;
         this.pl.lblMascotas.addMouseListener(this);
@@ -24,6 +30,11 @@ public class ControladorPantallaPrincipal implements MouseListener {
         this.pl.lblManual.addMouseListener(this);
     }
 
+    /**
+     * Maneja el evento de clic del ratón.
+     * Abre las ventanas correspondientes según el elemento clickeado.
+     * @param e El evento MouseEvent.
+     */
     @Override
     public void mouseClicked(MouseEvent e) {
         //Validando si se presiono la tecla de ingreso
@@ -55,15 +66,27 @@ public class ControladorPantallaPrincipal implements MouseListener {
         }
     }
     
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void mouseEntered(MouseEvent arg0) {}
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void mouseExited(MouseEvent arg0) {}
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void mousePressed(MouseEvent arg0) {}
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void mouseReleased(MouseEvent arg0) {}  
 }

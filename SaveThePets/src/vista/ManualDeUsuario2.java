@@ -1,14 +1,17 @@
-
 package vista;
 
 /**
- *
+ * Panel que representa la sección de Instrucciones 1 del manual de usuario.
  * @author Walla Peguero
  */
 public class ManualDeUsuario2 extends javax.swing.JPanel {
 
     /**
      * Creates new form ManualDeUsuario2
+     */
+    /**
+     * Constructor del panel ManualDeUsuario2.
+     * Inicializa los componentes y establece el foco en la etiqueta de título.
      */
     public ManualDeUsuario2() {
         initComponents();

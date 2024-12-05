@@ -3,8 +3,9 @@ package modelo;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 /**
- *
+ * Data Access Object (DAO) para la gestión de usuarios en la base de datos.
  * @author WilfredoFC
  */
 public class LoginDAO {
@@ -13,6 +14,12 @@ public class LoginDAO {
     PreparedStatement ps;
     ResultSet rs;
     
+    /**
+     * Verifica las credenciales de un usuario en la base de datos.
+     * @param usuariof El nombre de usuario.
+     * @param clavef La contraseña del usuario.
+     * @return True si las credenciales son válidas, false en caso contrario.
+     */
     public boolean realizarLogin(String usuariof, String clavef) {
         con = conectar.conectar();
 

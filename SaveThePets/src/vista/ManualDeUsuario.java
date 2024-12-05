@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package vista;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatArcDarkIJTheme;
@@ -10,13 +6,18 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
- *
+ * Ventana principal del manual de usuario.
  * @author Walla Peguero
  */
 public class ManualDeUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form ManualDeUsuario
+     */
+    /**
+     * Constructor de la clase ManualDeUsuario.
+     * Inicializa los componentes, establece el icono, título y posición de la ventana.
+     * Agrega el panel principal del manual.
      */
     public ManualDeUsuario() {
         initComponents();
@@ -26,7 +27,7 @@ public class ManualDeUsuario extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); //Cerrar Ventana
 
-        //Codigo para meter un Jpanel dentro de otro
+        //Código para meter un JPanel dentro de otro usando BorderLayout
         ManualDeUsuario1 manual1 = new ManualDeUsuario1();
         manual1.setSize(640, 390);
         manual1.setLocation(0, 0);
@@ -145,7 +146,12 @@ public class ManualDeUsuario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Maneja la acción del botón MDU1 (Introducción).
+     * Carga el panel ManualDeUsuario1 en el panel content.
+     * @param evt El evento ActionEvent.
+     */
     private void MDU1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MDU1ActionPerformed
 
         ManualDeUsuario1 manual1 = new ManualDeUsuario1();
@@ -157,7 +163,11 @@ public class ManualDeUsuario extends javax.swing.JFrame {
         content.revalidate();
         content.repaint();
     }//GEN-LAST:event_MDU1ActionPerformed
-
+    /**
+     * Maneja la acción del botón MDU2 (Instrucciones 1).
+     * Carga el panel ManualDeUsuario2 en el panel content.
+     * @param evt El evento ActionEvent.
+     */
     private void MDU2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MDU2ActionPerformed
         ManualDeUsuario2 manual2 = new ManualDeUsuario2();
         manual2.setSize(640, 390);
@@ -168,7 +178,11 @@ public class ManualDeUsuario extends javax.swing.JFrame {
         content.revalidate();
         content.repaint();
     }//GEN-LAST:event_MDU2ActionPerformed
-
+    /**
+     * Maneja la acción del botón MDU3 (Instrucciones 2).
+     * Carga el panel ManualDeUsuario3 en el panel content.
+     * @param evt El evento ActionEvent.
+     */
     private void MDU3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MDU3ActionPerformed
         ManualDeUsuario3 manual3 = new ManualDeUsuario3();
         manual3.setSize(640, 390);
@@ -179,7 +193,11 @@ public class ManualDeUsuario extends javax.swing.JFrame {
         content.revalidate();
         content.repaint();
     }//GEN-LAST:event_MDU3ActionPerformed
-
+    /**
+     * Maneja la acción del botón MDU4 (Solución de Problemas Comunes).
+     * Carga el panel ManualDeUsuario4 en el panel content.
+     * @param evt El evento ActionEvent.
+     */
     private void MDU4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MDU4ActionPerformed
         ManualDeUsuario4 manual4 = new ManualDeUsuario4();
         manual4.setSize(640, 390);

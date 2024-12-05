@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
- * Vista del formolario Mascotas
+ * Vista del formulario de Mascotas.
  * @author Walla Peguero
  */
 public class FormMascotas extends javax.swing.JFrame {
@@ -13,12 +13,16 @@ public class FormMascotas extends javax.swing.JFrame {
     /**
      * Creates new form FormMascotas
      */
+    /**
+     * Constructor del formulario de Mascotas.
+     * Inicializa los componentes, establece el icono, título y posición de la ventana.
+     */
     public FormMascotas() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/Imagenes/huella.png")).getImage()); //Imagen para el soft
         this.setTitle("Mascotas");
         this.setLocationRelativeTo(null);
-        txtBuscar.requestFocus();
+        txtBuscar.requestFocus(); //Establece el foco en el campo de búsqueda
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); //Cerrar Ventana
     }
 

@@ -1,17 +1,20 @@
-
 package vista;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
- *
+ * Ventana que muestra información acerca del sistema.
  * @author Walla Peguero
  */
 public class AcercaDe extends javax.swing.JFrame {
 
     /**
      * Creates new form AcercaDe
+     */
+    /**
+     * Constructor de la clase AcercaDe.
+     * Inicializa los componentes de la ventana y la configura.
      */
     public AcercaDe() {
         initComponents();

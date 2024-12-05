@@ -9,8 +9,9 @@ import modelo.LoginDAO;
 import modelo.Login;
 import vista.LoginV;
 import vista.PantallaPrincipal;
+
 /**
- *
+ * Clase controladora para las operaciones de inicio de sesión.
  * @author WilfredoFC
  */
 public class ControladorLogin implements ActionListener {
@@ -18,18 +19,31 @@ public class ControladorLogin implements ActionListener {
     Login l = new Login();
     LoginV loginv = new LoginV();
 
+    /**
+     * Constructor para la clase ControladorLogin.
+     * @param l El objeto LoginV (vista).
+     */
     public ControladorLogin(LoginV l) {
         this.loginv = l;
         this.loginv.btnIngresar.addActionListener(this);
     }
     
-     private void limpiarCampos(LoginV l) {
+    /**
+     * Limpia los campos de usuario y contraseña en el formulario de inicio de sesión.
+     * @param l El objeto LoginV (vista) que contiene los campos.
+     */
+    private void limpiarCampos(LoginV l) {
         l.txtUsuario.setText("");
         l.txtClave.setText("");
         l.txtUsuario.requestFocus();
     }
      
-     private boolean validarCampos(LoginV l) {
+    /**
+     * Valida que los campos de usuario y contraseña no estén vacíos.
+     * @param l El objeto LoginV (vista) que contiene los campos.
+     * @return True si los campos son válidos, false en caso contrario.
+     */
+    private boolean validarCampos(LoginV l) {
         if (l.txtUsuario.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(loginv, "Por favor, ingresa tu usuario!", "Error!", JOptionPane.ERROR_MESSAGE);
             l.txtUsuario.requestFocus();
@@ -43,7 +57,14 @@ public class ControladorLogin implements ActionListener {
         return true;
     }
      
-     public boolean AccionarLogin(String usuario, String clave, LoginV login) {
+    /**
+     * Intenta iniciar sesión al usuario usando las credenciales proporcionadas.
+     * @param usuario El nombre de usuario.
+     * @param clave La contraseña.
+     * @param login El objeto LoginV (vista).
+     * @return True si el inicio de sesión es exitoso, false en caso contrario.
+     */
+    public boolean AccionarLogin(String usuario, String clave, LoginV login) {
         if (validarCampos(login)) {
             //Campos validados!
             try {
@@ -69,9 +90,12 @@ public class ControladorLogin implements ActionListener {
     }
      
      
+    /**
+     * Maneja los eventos de clic de botón.
+     * @param e El evento ActionEvent.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        
         if (e.getSource() == loginv.btnIngresar) {
             String usuario = loginv.txtUsuario.getText();
             String clave   = loginv.txtClave.getText();
