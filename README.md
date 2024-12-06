@@ -4,7 +4,7 @@
 Los albergues de mascotas, especialmente los de reciente creación, suelen enfrentar una serie de desafíos en la gestión de sus operaciones. 
 Save The Pets fue desarrollado con el fin de solventar esta problematica.
 
-<a href="https://youtu.be/cNphCFTH-1k" style="color: black; text-decoration-color: #333;">¡Click aquí! Para ver la Video Presentación del Proyecto</a>
+[¡Click aquí! Para ver la Video Presentación del Proyecto](https://youtu.be/cNphCFTH-1k)
 
 ## Arquitectura
 Este proyecto implementa una arquitectura Modelo-Vista-Controlador (MVC) para separar las responsabilidades de la aplicación y facilitar su mantenimiento.
