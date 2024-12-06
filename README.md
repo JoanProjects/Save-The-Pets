@@ -1,9 +1,10 @@
 ![image](https://github.com/user-attachments/assets/0c90f12c-e86f-4eac-8dd7-028a9640985c)
-[Video Presentación](https://youtu.be/cNphCFTH-1k)
 
 ## Descripción
 Los albergues de mascotas, especialmente los de reciente creación, suelen enfrentar una serie de desafíos en la gestión de sus operaciones. 
 Save The Pets fue desarrollado con el fin de solventar esta problematica.
+
+[Video Presentación del Projecto](https://youtu.be/cNphCFTH-1k)
 
 ## Arquitectura
 Este proyecto implementa una arquitectura Modelo-Vista-Controlador (MVC) para separar las responsabilidades de la aplicación y facilitar su mantenimiento.
@@ -22,6 +23,14 @@ Este proyecto implementa una arquitectura Modelo-Vista-Controlador (MVC) para se
 * **FlatLaf:** Librería para personalizar el aspecto de las aplicaciones Java Swing.
 * **SQLite:** Sistema de gestión de bases de datos ligero y embebido.
 
+## Metodología
+Este proyecto utiliza la metodología Scrum para su desarrollo, incluyendo planificación de sprints, reuniones diarias, revisiones y retrospectivas.
+
+## Librerias:
+- flatLaf
+- flatlaf-intellij-themes
+- SQLite
+
 ### Instalación
 1. **Requisitos:**
    * Java JDK 23 o superior instalado.
@@ -32,18 +41,12 @@ Este proyecto implementa una arquitectura Modelo-Vista-Controlador (MVC) para se
      java -jar Save-The-Pets.jar
      ```
    * **Haciendo doble clic:**
-     Si su sistema operativo está configurado para ejecutar archivos JAR, puede hacer doble clic en el archivo descargado.
-
-## Librerias:
-- flatLaf
-- flatlaf-intellij-themes
-- SQLite  
+     Si su sistema operativo está configurado para ejecutar archivos JAR, puede hacer doble clic en el archivo descargado. 
 
 ## Contacto
 Para cualquier duda o sugerencia, por favor contacta con nosotros:
 * **Correo electrónico:** speedsofttechnology@gmail.com
 * **Teléfono:** 8098578140
- 
 
 ## SpeedSoft 
 
