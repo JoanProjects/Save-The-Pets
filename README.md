@@ -75,6 +75,8 @@ Para cualquier duda o sugerencia, por favor contacta con nosotros:
 
 ## Creditos 
 
-Un reconocimiento especial para nuestro mentor Jesus Quezada. Su guía y capacidad de sacarnos de nuestra zona de confort fueron esenciales para el desarrollo de este proyecto.
+Un reconocimiento especial para nuestros mentores:
+* **Jesus Quezada.** Su guía y capacidad de sacarnos de nuestra zona de confort fueron esenciales para el desarrollo de este proyecto.
+* **Carlos Caraballo.** Su capacidad analítica y alto entendimiento del proceso de desarrollo fue crucial para superar un momento decisivo del proyecto.
 
 Fecha de Creación: 12/11/2024 
