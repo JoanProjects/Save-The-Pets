@@ -73,4 +73,8 @@ Para cualquier duda o sugerencia, por favor contacta con nosotros:
   </tr>
 </table>
 
+## Creditos 
+
+Un reconocimiento especial para nuestro mentor Jesus Quezada. Su guía y capacidad de sacarnos de nuestra zona de confort fueron esenciales para el desarrollo de este proyecto.
+
 Fecha de Creación: 12/11/2024 
